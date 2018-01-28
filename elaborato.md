@@ -35,73 +35,73 @@ Le sezioni 1 e 4 sono navigabili anche da utenti non loggati.
 
 1.   Creazione di un account tutor
 
-  1.  Il docente accede alla piattaforma
+     1.  Il docente accede alla piattaforma
 
-  2.  Il docente compila un form con i dati del tutor
+     2.  Il docente compila un form con i dati del tutor
 
-  3.  Il docente conferma l'operazione
+     3.  Il docente conferma l'operazione
 
-  4.  Il tutor riceve l'invito via email
+     4.  Il tutor riceve l'invito via email
 
-  5.  Il tutor effettua il login utilizzando i dati temporanei ricevuti per email
+     5.  Il tutor effettua il login utilizzando i dati temporanei ricevuti per email
 
-  6.  Il tutor cambia la password
+     6.  Il tutor cambia la password
 
 2.   Creazione di un account studente
 
-    1.  Lo studente comunica la propria mail ad un docente o ad un tutor
+     1.  Lo studente comunica la propria mail ad un docente o ad un tutor
 
-    2.  Il docente o il tutor compila un form con la mail dello studente
+     2.  Il docente o il tutor compila un form con la mail dello studente
 
-    3.  Il docente o il tutor conferma l'operazione
+     3.  Il docente o il tutor conferma l'operazione
 
-    4.  Lo studente riceve un invito tramite mail
+     4.  Lo studente riceve un invito tramite mail
 
-    5.  Lo studente compila il form con i suoi dati
+     5.  Lo studente compila il form con i suoi dati
 
-    6.  Lo studente conferma l'operazione
+     6.  Lo studente conferma l'operazione
 
 3.   Modifica degli elementi di una sezione
 
-    1.  Il docente o il tutor accede al sito
+     1.  Il docente o il tutor accede al sito
 
-    2.  Il docente o il tutor naviga fino alla sezione da modificare
+     2.  Il docente o il tutor naviga fino alla sezione da modificare
 
-    3.  Il docente o il tutor seleziona la modalità di modifica della sezione
+     3.  Il docente o il tutor seleziona la modalità di modifica della sezione
 
-    4.  Il docente o il tutor può scegliere di correggere il testo presente all'interno della pagina, di aggiungerne di nuovo o di scegliere un file locale da caricare sulla piattaforma
+     4.  Il docente o il tutor può scegliere di correggere il testo presente all'interno della pagina, di aggiungerne di nuovo o di scegliere un file locale da caricare sulla piattaforma
 
-    5.  Il docente o il tutor salva le modifiche apportate
+     5.  Il docente o il tutor salva le modifiche apportate
 
 4.   Creazione di un gruppo di studenti
 
-    1.  Lo studente accede alla piattaforma
+     1.  Lo studente accede alla piattaforma
 
-    2.  Lo studente naviga fino alla sezione dedicata agli elaborati e alla gestione dei gruppi
+     2.  Lo studente naviga fino alla sezione dedicata agli elaborati e alla gestione dei gruppi
 
-    3.  Lo studente sceglie la modalità di creazione di un gruppo
+     3.  Lo studente sceglie la modalità di creazione di un gruppo
 
-    4.  Lo studente inserisce il nome del gruppo
+     4.  Lo studente inserisce il nome del gruppo
 
-    5.  Lo studente inserisce gli indirizzi email degli studenti da invitare. A questi studenti verranno inviati automaticamente degli inviti a prendere parte al gruppo
+     5.  Lo studente inserisce gli indirizzi email degli studenti da invitare. A questi studenti verranno inviati automaticamente degli inviti a prendere parte al gruppo
 
-    6.  Gli studenti invitati confermano di voler prendere parte al gruppo
+     6.  Gli studenti invitati confermano di voler prendere parte al gruppo
 
-    7.  Se il numero totale di studenti per il gruppo è 3, il gruppo è arrivato
+     7.  Se il numero totale di studenti per il gruppo è 3, il gruppo è arrivato
 
-    8.  In caso contrario, il gruppo deve essere attivato da un docente o da un tutor. Viene inviato automaticamente un messaggio ai docenti e ai tutor.
+     8.  In caso contrario, il gruppo deve essere attivato da un docente o da un tutor. Viene inviato automaticamente un messaggio ai docenti e ai tutor.
 
 5.   Modifica di un elaborato
 
-    1.  Lo studente, che fa parte di un gruppo già attivato, accede alla piattaforma
+     1.  Lo studente, che fa parte di un gruppo già attivato, accede alla piattaforma
 
-    2.  Lo studente naviga fino alla sezione dedicata agli elaborati e alla gestione dei gruppi
+     2.  Lo studente naviga fino alla sezione dedicata agli elaborati e alla gestione dei gruppi
 
-    3.  Lo studente sceglie la modalità di modifica dell'elaborato
+     3.  Lo studente sceglie la modalità di modifica dell'elaborato
 
-    4.  Lo studente carica il documento dell'elaborato sul sito. La piattaforma accetta file con estensione .pdf oppure un link che rimanda ad un documento di Google Drive Il docente o il tutor possono inserire dei commenti relativi agli elaborati caricati da ogni gruppo
+     4.  Lo studente carica il documento dell'elaborato sul sito. La piattaforma accetta file con estensione .pdf oppure un link che rimanda ad un documento di Google Drive Il docente o il tutor possono inserire dei commenti relativi agli elaborati caricati da ogni gruppo
 
-    5.  Gli studenti che fanno parte di un gruppo attivato ricevono un messaggio automatico ogni volte che il docente o il tutor inseriscono un commento al loro elaborato
+     5.  Gli studenti che fanno parte di un gruppo attivato ricevono un messaggio automatico ogni volte che il docente o il tutor inseriscono un commento al loro elaborato
 
 ## Attori ed obiettivi primari (macro funzionalità) e scenari
 
