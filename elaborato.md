@@ -1,8 +1,8 @@
-## Testo originale
+## Testo Originale della Minuta di Meeting
 
 Sono previsti servizi per studenti, docenti e tutor. Docenti e tutor definiscono la sezione dedicata alle informazioni generali del corso ( descrizione, programma, testi consigliati, info e altro ..); la sezione dedicata ai materiali didattici ( slides e dispense); la sezione dedicata alle esercitazioni, agli elaborati, alla costituzione elenco gruppi di lavoro e assegnazione tutor ed elaborati, altro...; la sezione dedicata a testi, standard, lectures suggeriti; la sezione dedicata a iniziative culturali e scientifiche. Gli studenti potranno visitare le diverse sezioni del sito, scaricare materiali didattici e nell'apposita area depositare gli elaborati di gruppo.
 
-## Testo strutturato
+## Concetti utili per strutturare il testo
 
 È richiesto di implementare un sito web per la gestione del corso di ingegneria informatica. Il sito web deve gestire l'accesso a tre tipologie di utenti; gli studenti, i docenti e i tutor. Gli account dei docenti possono essere creati solo dal gestore del sito. Un docente può creare un account tutor. I docenti e i tutor possono invitare gli studenti a partecipare tramite una mail. Gli studenti possono richiedere l'accesso al sistema dando la loro mail al docente o al tutor a lezione, o compilando un form sul sito.
 
@@ -129,11 +129,12 @@ Le sezioni 1 e 4 sono navigabili anche da utenti non loggati.
 
 ### Studente
 
-| Codice | Obiettivo primario               | Riferimento                              |
-| ------ | -------------------------------- | ---------------------------------------- |
-| MF.7   | Creazione di un account studente | 2.1<br />2.4<br />2.5<br />2.6           |
-| MF.8   | Creazione di un gruppo           | 4.1<br />4.2<br />4.3<br />4.4<br />4.5<br />4.6<br />4.7 |
-| MF.9   | Modifica di un elaborato         | 5.1<br />5.2<br />5.3<br />5.6           |
+| Codice | Obiettivo primario                   | Riferimento                              |
+| ------ | ------------------------------------ | ---------------------------------------- |
+| MF.7   | Creazione di un account studente     | 2.1<br />2.4<br />2.5<br />2.6           |
+| MF.8   | Creazione di un gruppo               | 4.1<br />4.2<br />4.3<br />4.4<br />4.5<br />4.7 |
+| MF.9   | Conferma partecipazione ad un gruppo | 4.6                                      |
+| MF.10  | Modifica di un elaborato             | 5.1<br />5.2<br />5.3<br />5.4<br />     |
 
 ## Scenari
 
@@ -183,7 +184,7 @@ ___
 
 | Scenario                                 | SC.3.1                                   |
 | ---------------------------------------- | ---------------------------------------- |
-| **Scopo**                                | Aggiunta di un nuovo studente alla piattaforma |
+| **Scopo**                                | Aggiunta di un nuovo studente alla piattaforma - invito di un nuovo studente |
 | **Utenti coinvolti**                     | Amministratore 1                         |
 | **Assunzioni**                           | L'amministratore 1 è in possesso dei dati dello studente |
 | **Descrizione colloquio dello scenario** | - L'amministratore, usando il suo web browser si collega alla piattaforma.<br />- La piattaforma chiede, tramite un form, le credenziali di accesso.<br />- L'amministratore effettua il login.<br />- L'amministratore preme sul pulsante per l'aggiunta di un nuovo studente.<br />- Il sistema chiede, tramite un form, di inserire i dati dello studente.<br />- L'amministratore compila il form e completa l'operazione.<br />- Il sistema informa l'amministratore del buon esito dell'operazione. |
@@ -191,10 +192,17 @@ ___
 
 | Scenario                                 | SC.3.2                                   |
 | ---------------------------------------- | ---------------------------------------- |
-| **Scopo**                                | Aggiunta di un nuovo studente alla piattaforma - Lo studente già esiste |
+| **Scopo**                                | Aggiunta di un nuovo studente alla piattaforma - invito di un nuovo studente, lo studente già esiste |
 | **Utenti coinvolti**                     | Amministratore 2                         |
 | **Assunzioni**                           | L'amministratore 2 è in possesso dei dati dello studente |
 | **Descrizione colloquio dello scenario** | - L'amministratore, usando il suo web browser si collega alla piattaforma.<br />- La piattaforma chiede, tramite un form, le credenziali di accesso.<br />- L'amministratore effettua il login.<br />- L'amministratore preme sul pulsante per l'aggiunta di un nuovo studente.<br />- Il sistema chiede, tramite un form, di inserire i dati dello studente.<br />- L'amministratore compila il form e completa l'operazione.<br />- Il sistema informa l'amministratore che i dati inseriti corrispondono ad un utente già presente nel sistema |
+
+| Scenario                                 | SC.3.3                                   |
+| ---------------------------------------- | ---------------------------------------- |
+| **Scopo**                                | Aggiunta di un nuovo studente alla piattaforma - Lo studente non viene accettato**Utenti coinvolti** |
+|                                          | Amministratore 3                         |
+| **Assunzioni**                           |                                          |
+| **Descrizione colloquio dello scenario** | - Il sistema notivica all'amministratore che un nuovo utente ha richiesto di accedere alla piattaforma in qualità di studente.<br />- L'amministratore analizza la richiesta.<br />- L'amministratore rifiuta la richiesta e compila una nota spiegando le motivazioni della sua scelta.<br />- L'amministratore clicca sul pulsante di conferma.<br />- Il sistema comunica il buon esito dell'operazione.<br />- Il sistema inoltra la nota all'email dell'utente richiedente. |
 ### Scenari MF.4 - Modifica di una sezione  
 
 | Scenario                                 | SC.4.1                                   |
@@ -202,7 +210,7 @@ ___
 | **Scopo**                                | Modifica di una sezione                  |
 | **Utenti coinvolti**                     | Amministratore 1                         |
 | **Assunzioni**                           | L'amministratore 1 ha già effettuato il login |
-| **Descrizione colloquio dello scenario** | - L'amministratore sceglie la sezione da modificare.<br />- L'amministratore preme sul pulsante per la modifica.<br />- il sistema reindirizza l'amministratore in un editor per la modifica.<br />- L'amministratore apporta le modifiche.<br />- L'amministratore salva le modifiche.<br />- Il sistema comunica il successo dell'operazione. |
+| **Descrizione colloquio dello scenario** | - L'amministratore sceglie la sezione da modificare.<br />- L'amministratore preme sul pulsante per la modifica.<br />- il sistema reinderizza l'amministratore in un editor per la modifica.<br />- L'amministratore apporta le modifiche.<br />- L'amministratore salva le modifiche.<br />- Il sistema comunica il successo dell'operazione. |
 ___
 
 | Scenario                                 | SC.4.2                                   |
@@ -210,7 +218,7 @@ ___
 | **Scopo**                                | Modifica di una sezione - Uscita senza salvare |
 | **Utenti coinvolti**                     | Amministratore 2                         |
 | **Assunzioni**                           | L'amministratore 2 ha già effettuato il login |
-| **Descrizione colloquio dello scenario** | - L'amministratore sceglie la sezione da modificare.<br />- L'amministratore preme sul pulsante per la modifica.<br />- il sistema reindirizza l'amministratore in un editor per la modifica.<br />- L'amministratore apporta le modifiche.<br />- L'amministratore chiude la pagina senza salvare le modifiche.<br />- Il sistema chiede all'amministratore se effettivamente desidera uscire senza salvare le modifiche.<br />- L'amministratore conferma la propria scelta. |
+| **Descrizione colloquio dello scenario** | - L'amministratore sceglie la sezione da modificare.<br />- L'amministratore preme sul pulsante per la modifica.<br />- il sistema renderizza l'amministratore in un editor per la modifica.<br />- L'amministratore apporta le modifiche.<br />- L'amministratore chiude la pagina senza salvare le modifiche.<br />- Il sistema chiede all'amministratore se effettivamente desidera uscire senza salvare le modifiche.<br />- L'amministratore conferma la propria scelta. |
 ___
 
 | Scenario                                 | SC.4.3                                   |
@@ -218,7 +226,7 @@ ___
 | **Scopo**                                | Modifica di una sezione - Impossibilità ad effettuare la modifica |
 | **Utenti coinvolti**                     | Amministratore 3                         |
 | **Assunzioni**                           | L'amministratore 3 ha già effettuato il login |
-| **Descrizione colloquio dello scenario** | - L'amministratore sceglie la sezione da modificare.<br />- L'amministratore preme sul pulsante per la modifica.<br />- Il sistema avvisa l'amministratore che un altro amministratore già sta apportando modifiche alla sezione.<br />- il sistema chiede all'amministratore di riprovare più tardi. |
+| **Descrizione colloquio dello scenario** | - L'amministratore sceglie la sazione da modificare.<br />- L'amministratore preme sul pulsante per la modifica.<br />- Il sistema avvisa l'amministratore che un altro amministratore già sta apportando modifiche alla sezione.<br />- il sistema chiede all'amministratore di riprovare più tardi. |
 ### Scenari MF.5 - Approvazione di un gruppo 
 
 | Scenario                                 | SC.5.1                                   |
@@ -226,15 +234,18 @@ ___
 | **Scopo**                                | Approvazione di un gruppo                |
 | **Utenti coinvolti**                     | Amministratore 1                         |
 | **Assunzioni**                           | L'amministratore 1 ha già effettuato il login, all'amministratore è stata notificata la richiesta di approvazione |
-| **Descrizione colloquio dello scenario** | - L'amministratore clicca sulla notifica.<br />- Il sistema apre una finestra che contiene l'elenco dei membri ed eventuali note degli studenti.<br />- L'amministratore clicca sul pulsante per l'approvazione.<br />- Il sistema gli comunica il buon esito dell'operazione.<br />- Il sistema notifica agli studenti che il gruppo è stato approvato. |
+| **Descrizione colloquio dello scenario** | - L'amministratore clicca sulla notifica.<br />- Il sistema apre una finestra che contiene l'elenco dei menbri ed eventuali note degli studenti.<br />- L'amministratore clicca sul pulsante per l'approvazione.<br />- Il sistema gli comunica il buon esito dell'operazione.<br />- Il sistema notifica agli studenti che il gruppo è stato approvato. |
 ___
+
+
 
 | Scenario                                 | SC.5.2                                   |
 | ---------------------------------------- | ---------------------------------------- |
 | **Scopo**                                | Approvazione di un gruppo - Il gruppo non viene approvato |
 | **Utenti coinvolti**                     | Amministratore 2                         |
 | **Assunzioni**                           | L'amministratore 2 ha già effettuato il login, all'amministratore è stata notificata la richiesta di approvazione |
-| **Descrizione colloquio dello scenario** | - L'amministratore clicca sulla notifica.<br />- Il sistema apre una finestra che contiene l'elenco dei membri ed eventuali note degli studenti.<br />- L'amministratore clicca sul pulsante per non approvare il gruppo.<br />- Il sistema mostra un'area di testo.<br />- L'amministratore scrive nell'area di testo le motivazioni della sua decisione e conferma l'operazione.<br />- Il sistema gli comunica il buon esito dell'operazione.<br />- Il sistema notifica agli studenti che il gruppo non è stato approvato. |
+| **Descrizione colloquio dello scenario** | - L'amministratore clicca sulla notifica.<br />- Il sistema apre una finestra che contiene l'elenco dei menbri ed eventuali note degli studenti.<br />- L'amministratore clicca sul pulsante per non approvare il gruppo.<br />- Il sistema mostra un'area di testo.<br />- L'amministratore scrive nell'area di testo le motivazioni della sua decisione e conferma l'operazione.<br />- Il sistema gli comunica il buon esito dell'operazione.<br />- Il sistema notifica agli studenti che il gruppo non è stato approvato. |
+___
 
 ### Scenari MF.6 - Commentare il lavoro di un gruppo
 
@@ -242,7 +253,96 @@ ___
 | ---------------------------------------- | ---------------------------------------- |
 | **Scopo**                                | Commentare il lavoro di un gruppo        |
 | **Utenti coinvolti**                     | Amministratore 1                         |
-| **Assunzioni**                           | L'amministratore 1 ha già effettuato il login |
-| **Descrizione colloquio dello scenario** | - L'amministratore si reca nella sezione dedicata agli elaborati.<br />- Il sistema gli mostra un elenco con i vari gruppi.<br />- L'amministratore clicca sul gruppo d'interesse.<br />- Il sistema mostra una pagina contenete tutto il materiale prodotto degli studenti.<br />- L'amministratore controlla il lavoro degli studenti.<br />- L'amministratore scrive una nota nell'apposita area di testo.<br />- L'amministratore clicca sul pulsante di conferma.<br />- Il sistema comunica il buon esito dell'operazione. |
+| **Assunzioni**                           | L'amministratore 1 ha già effettuato il login, all'amministratore è stata notificata la richiesta di revisione di un elaborato o parte di esso |
+| **Descrizione colloquio dello scenario** | - L'amministratore clicca sulla notifica.<br />- Il sistema apre un editor per la visualizzazione e la modifica di un elaborato ed eventuali note degli studenti membri del gruppo.<br />- L'amministratore effettua le eventuali modifiche.<br />- L'amministratore inserisci gli eventuali commenti all'elaborato.<br />- L'amministratore clicca sul pulsante per salvare le modifiche.<br />- Il sistema gli comunica il buon esito dell'operazione.<br />- Il sistema notifica agli studenti che l'amministratore ha revisionato il loro elaborato. |
+___
+
+### Scanari MF.7 - Creazione di un account studente
+
+| Scenario                                 | SC.7.1                                   |
+| ---------------------------------------- | ---------------------------------------- |
+| **Scopo**                                | Creazione di un account studente         |
+| **Utenti coinvolti**                     | Studente 1                               |
+| **Assunzioni**                           |                                          |
+| **Descrizione colloquio dello scenario** | - Lo studente tramite il suo web browser si collega alla pagina per richiedere l'acesso.<br />- Lo studente compila il form inserendo la sua email e preme il pulsante per la conferma.<br />- Il sistema comunica il buon esito dell'operazione.<br />- Lo studente riceve l'invito via email.<br />- Lo studente tramite il link ricevuto via email si collega alla pagina di registrazione.<br />- Lo studente compila un form con tutti i suoi dati e preme il pulsante di conferma.<br />- Il sistema gli comunica il buon esito dell'operazione e lo reindirizza alla home page del sito. |
+___
+
+| Scenario                                 | SC.7.2                                   |
+| ---------------------------------------- | ---------------------------------------- |
+| **Scopo**                                | Creazione di un account studente - email comunicata verbalmente |
+| **Utenti coinvolti**                     | Studente 2                               |
+| **Assunzioni**                           | Lo studente 2 ha comunicato verbalmente la sua email ad un amministratore |
+| **Descrizione colloquio dello scenario** | - Lo studente riceve l'invito via email.<br />- Lo studente tramite il link ricevuto via email si collega alla pagina di registrazione.<br />- Lo studente compila un form con tutti i suoi dati e preme il pulsante di conferma.<br />- Il sistema gli comunica il buon esito dell'operazione e lo reindirizza alla home page del sito. |
+___
+
+| Scenario                                 | SC.7.3                                   |
+| ---------------------------------------- | ---------------------------------------- |
+| **Scopo**                                | Creazione di un account studente - la richiesta è stata rifutata |
+| **Utenti coinvolti**                     | Studente 3                               |
+| **Assunzioni**                           | Lo studente 3 ha già comunicato la sua email ad un amministratore |
+| **Descrizione colloquio dello scenario** | - Lo studente riceve via email le ragioni del rifiuto<br />- Lo studente invia una mail di risposta all'amministratore. |
+___
+
+### Scenari MF.8 - Creazione di un nuovo gruppo
+
+| Scenario                                 | SC.8.1                                   |
+| ---------------------------------------- | ---------------------------------------- |
+| **Scopo**                                | Creazione di un nuovo gruppo             |
+| **Utenti coinvolti**                     | Studente 1                               |
+| **Assunzioni**                           | Lo studente 1 ha già effettuato il login |
+| **Descrizione colloquio dello scenario** | - Lo studente clicca sul pulsante per la creazione di un nuovo gruppo .<br />- Il sistema apre una finestra per l'inserimento del nome del gruppo e la selezione del numero di membri da invitare.<br />- Lo studente inserisce il nome del gruppo e seleziona tre come numero di membri da invitare.<br />- Il sistema verifica la disponibilità del nome del gruppo.<br />- Il sistema notifica la disponibilità del nome.<br />- Il sistema apre una finestra per l'inserimento delle credenziali degli studenti da invitare.<br />- Lo studente inserisce i nomi dei membri e clicca sul pulsante di conferma.<br />- Il sistema conferma il buon esito dell'operazione e invia una notifica agli studenti invitati.<br />- Il sistema notifica che il gruppo è attivo |
+
+___
+
+| Scenario                                 | SC.8.2                                   |
+| ---------------------------------------- | ---------------------------------------- |
+| **Scopo**                                | Creazione di un nuovo gruppo - numero di membri diversi da tre |
+| **Utenti coinvolti**                     | Studente 2                               |
+| **Assunzioni**                           | Lo studente 2 ha già effettuato il login |
+| **Descrizione colloquio dello scenario** | - Lo studente clicca sul pulsante per la creazione di un nuovo gruppo .<br />- Il sistema apre una finestra per l'inserimento del nome del gruppo e la selezione del numero di membri da invitare.<br />- Lo studente inserisce il nome del gruppo e seleziona il numero di membri da invitare.<br />- Il sistema verifica la disponibilità del nome del gruppo.<br />- Il sistema notifica la disponibilità del nome.<br />- Il sistema apre una finestra per l'inserimento delle credenziali degli studenti da invitare.<br />- Lo studente inserisce i nomi dei membri e clicca sul pulsante di conferma.<br />- Il sistema conferma il buon esito dell'operazione e invia una notifica agli studenti invitati.<br />- Il sistema invia una notifica all'amministratore per l'approvazione del gruppo<br />- Il sistema notifica che il gruppo non è statro approvato e mostra le motivazioni della scelta. |
+___
+
+| Scenario                                 | SC.8.3                                   |
+| ---------------------------------------- | ---------------------------------------- |
+| **Scopo**                                | Creazione di un nuovo gruppo - numero di membri diversi da tre |
+| **Utenti coinvolti**                     | Studente 3                               |
+| **Assunzioni**                           | Lo studente 3 ha già effettuato il login |
+| **Descrizione colloquio dello scenario** | - Lo studente clicca sul pulsante per la creazione di un nuovo gruppo .<br />- Il sistema apre una finestra per l'inserimento del nome del gruppo e la selezione del numero di membri da invitare.<br />- Lo studente inserisce il nome del gruppo e seleziona il numero di membri da invitare.<br />- Il sistema verifica la disponibilità del nome del gruppo.<br />- Il sistema notifica la disponibilità del nome.<br />- Il sistema apre una finestra per l'inserimento delle credenziali degli studenti da invitare.<br />- Lo studente inserisce i nomi dei membri e clicca sul pulsante di conferma.<br />- Il sistema notifica che uno studente non è inscritto alla piattaforma.<br />- Lo studente annulla l'operazione. |
+
+### Scenari MF.9 -  Conferma partecipazione ad un gruppo 
+
+| Scenario                                 | SC.9.1                                   |
+| ---------------------------------------- | ---------------------------------------- |
+| **Scopo**                                | Conferma partecipazione ad un gruppo     |
+| **Utenti coinvolti**                     | Studente 1                               |
+| **Assunzioni**                           | Lo studente 1 ha già effettuato il login |
+| **Descrizione colloquio dello scenario** | - Lo studente riceve la notifica di partecipazione ad un gruppo.<br />- Lo studente clicca sulla notifica.<br />- Il sistema apre una pagina con il nome del gruppo e la lista dei partecipati.<br />- Lo studente clicca sul pulsante di conferma per la partecipazione.<br />- Il sistema conferma il buon esito dell'operazione. |
+___
+
+| Scenario                                 | SC.9.2                                   |
+| ---------------------------------------- | ---------------------------------------- |
+| **Scopo**                                | Conferma partecipazione ad un gruppo - rifuito dello studente |
+| **Utenti coinvolti**                     | Studente 2                               |
+| **Assunzioni**                           | Lo studente 2 ha già effettuato il login |
+| **Descrizione colloquio dello scenario** | - Lo studente riceve la notifica di partecipazione ad un gruppo.<br />- Lo studente clicca sulla notifica.<br />- Il sistema apre una pagina con il nome del gruppo e la lista dei partecipati.<br />- Lo studente clicca sul pulsante per rifiutare la partecipazione.<br />- Il sistema conferma il buon esito dell'operazione. |
+___
+
+### Scenari MF.10 - Modifica di un elaborato
+
+| Scenario                                 | SC.10.1                                  |
+| ---------------------------------------- | ---------------------------------------- |
+| **Scopo**                                | Modifica di un elaborato                 |
+| **Utenti coinvolti**                     | Studente 1                               |
+| **Assunzioni**                           | Lo studente 1 ha già effettuato il login |
+| **Descrizione colloquio dello scenario** | - Lo studente si reca nella sezione dedicata agli elaborati.<br />- Lo studente clicca sul pulsante per aggiungere un nuovo documento.<br />- Il sistema chiede con quale sistema aggiungere il documento.<br />- Lo studente sceglie l'upload diretto e seleziona il file da caricare.<br />- Il sistema conferma il buon esito dell'operazione. |
+
+___
+
+| Scenario                                 | SC.10.2                                  |
+| ---------------------------------------- | ---------------------------------------- |
+| **Scopo**                                | Modifica di un elaborato                 |
+| **Utenti coinvolti**                     | Studente 2                               |
+| **Assunzioni**                           | Lo studente 2 ha già effettuato il login |
+| **Descrizione colloquio dello scenario** | - Lo studente si reca nella sezione dedicata agli elaborati.<br />- Lo studente clicca sul pulsante per aggiungere un nuovo documento.<br />- Il sistema chiede con quale sistema aggiungere il documento.<br />- Lo studente sceglie di inserire un link ad un documento su Google Drive.<br />- Il sistema conferma il buon esito dell'operazione. |
 
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
