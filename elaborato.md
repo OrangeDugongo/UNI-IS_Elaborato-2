@@ -30,7 +30,6 @@ Le sezioni 1 e 4 sono navigabili anche da utenti non loggati.
 | **Apportare modifiche**    |                    | Aggiungere, modificare ed rimuovere contenuti dal sito web. |
 | **Utenti non loggati**     |                    | Visitatori della pagina web che non hanno effettuato nessun tipo di autenticazione. |
 | **Piattaforma**            | Sito web, sistema  | Il sistema preso in esame(?).            |
-| **Account amministratore** | Amministratore     | I docenti e i tutor sono account amministratori. |
 
 ## Requisiti
 
@@ -114,27 +113,30 @@ Le sezioni 1 e 4 sono navigabili anche da utenti non loggati.
 
 ### Tutor
 
-| Codice | Obiettivo primario        | Riferimento           |
-| ------ | ------------------------- | --------------------- |
-| MF.2   | Primo accesso di un tutor | 1.4<br />1.5<br />1.6 |
+| Codice | Obiettivo primario                       | Riferimento                             |
+| ------ | ---------------------------------------- | --------------------------------------- |
+| MF.2   | Aggiunta di un nuovo studente alla piattaforma | 2.2<br />2.3                            |
+| MF.3   | Modifica di una sezione                  | 3.1<br />3.2<br />3.3<br />3.4<br />3.5 |
+| MF.4   | Approvazione di un gruppo                | 4.8                                     |
+| MF.5   | Commentare il lavoro di un gruppo        | 5.5                                     |
 
-### Amministratore(docente o tutor)
+### Docente
 
 | Codice | Obiettivo primario                       | Riferimento                             |
 | ------ | ---------------------------------------- | --------------------------------------- |
-| MF.3   | Aggiunta di un nuovo studente alla piattaforma | 2.2<br />2.3                            |
-| MF.4   | Modifica di una sezione                  | 3.1<br />3.2<br />3.3<br />3.4<br />3.5 |
-| MF.5   | Approvazione di un gruppo                | 4.8                                     |
-| MF.6   | Commentare il lavoro di un gruppo        | 5.5                                     |
+| MF.2   | Aggiunta di un nuovo studente alla piattaforma | 2.2<br />2.3                            |
+| MF.3   | Modifica di una sezione                  | 3.1<br />3.2<br />3.3<br />3.4<br />3.5 |
+| MF.4   | Approvazione di un gruppo                | 4.8                                     |
+| MF.5   | Commentare il lavoro di un gruppo        | 5.5                                     |
 
 ### Studente
 
-| Codice | Obiettivo primario                   | Riferimento                              |
-| ------ | ------------------------------------ | ---------------------------------------- |
-| MF.7   | Creazione di un account studente     | 2.1<br />2.4<br />2.5<br />2.6           |
-| MF.8   | Creazione di un gruppo               | 4.1<br />4.2<br />4.3<br />4.4<br />4.5<br />4.7 |
-| MF.9   | Conferma partecipazione ad un gruppo | 4.6                                      |
-| MF.10  | Modifica di un elaborato             | 5.1<br />5.2<br />5.3<br />5.4<br />     |
+| Codice | Obiettivo primario                   | Riferimento                                      |
+| ------ | ------------------------------------ | ----------------------------------------         |
+| MF.6   | Creazione di un account studente     | 2.1<br />2.4<br />2.5<br />2.6                   |
+| MF.7   | Creazione di un gruppo               | 4.1<br />4.2<br />4.3<br />4.4<br />4.5<br />4.7 |
+| MF.8   | Conferma partecipazione ad un gruppo | 4.6                                              |
+| MF.9   | Modifica di un elaborato             | 5.1<br />5.2<br />5.3<br />5.4<br />             |
 
 ## Scenari
 
