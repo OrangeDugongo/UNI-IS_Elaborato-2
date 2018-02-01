@@ -151,6 +151,33 @@ ___
 | **Assunzioni**                           | Il docente 3 è in possesso di un account abilitato |
 | **Descrizione colloquio dello scenario** | - La piattaforma chiede le credenziali di accesso.<br />- Il docente comunica al sistema il suo username e la password.<br />- Il docente chiede al sistema di aggiungere un nuovo account tutor.<br />- Il sistema chiede al docente i dati del tutor.<br />- Il docente conferma l'operazione. <br/>- Il sistema comunica al docente che il tutor già esiste. |
 
+### Scenari MF.2 - Approvazione di uno studente 
+
+| Scenario                                 | SC.2.1                                   |
+| ---------------------------------------- | ---------------------------------------- |
+| **Scopo**                                | Approvazione di uno studente             |
+| **Utenti coinvolti**                     | Docente 1                                |
+| **Assunzioni**                           | Il docente 1 ha già effettuato l'accesso |
+| **Descrizione colloquio dello scenario** | - Il docente chiede la lista delle approvazioni pendenti.<br />- Il sistema risponde con la lista di tutti gli account studenti in attesa di approvazione.<br />- Il docente comunica l'approvazione a cui è interessato <br/>- Il sistema chiede al docente se vuole approvare o meno l'account.<br />- Il docente decide di approvare la richiesta.<br />- Il sistema comunica il buon esito dell'operazione. |
+
+---
+
+| Scenario                                 | SC.2.2                                   |
+| ---------------------------------------- | ---------------------------------------- |
+| **Scopo**                                | Approvazione di uno studente - la richiesta viene rifiutata |
+| **Utenti coinvolti**                     | Tutor 1                                  |
+| **Assunzioni**                           | Il tutor 1 ha già effettuato l'accesso   |
+| **Descrizione colloquio dello scenario** | - Il tutor chiede la lista delle approvazioni pendenti.<br />- Il sistema risponde con la lista di tutti gli account studenti in attesa di approvazione.<br />- Il tutor comunica l'approvazione a cui è interessato <br/>- Il sistema chiede al tutor se vuole approvare o meno l'account.<br />- Il tutor decide di rifiutare la richiesta.<br />- Il sistema chiede al tutor se vuole inserire una nota con le motivazioni.<br />- Il tutor comunica al sistema che vuole inserire la nota e immette nel sistema le motivazioni.<br />- Il sistema comunica il buon esito dell'operazione. |
+
+---
+
+| Scenario                                 | SC.2.3                                   |
+| ---------------------------------------- | ---------------------------------------- |
+| **Scopo**                                | Approvazione di uno studente - non ci sono richieste pendenti |
+| **Utenti coinvolti**                     | Docente 2                                |
+| **Assunzioni**                           | Il docente 2 ha già effettuato l'accesso |
+| **Descrizione colloquio dello scenario** | - Il docente chiede la lista delle approvazioni pendenti.<br />- Il sistema risponde che non c'è alcuna richiesta pendente. |
+
 ### Scenari MF.3 - Aggiunta di un nuovo studente alla piattaforma 
 
 | Scenario                                 | SC.3.1                                   |
