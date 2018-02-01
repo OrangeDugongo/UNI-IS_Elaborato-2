@@ -121,7 +121,8 @@ Le sezioni 1 e 4 sono navigabili anche da utenti non loggati.
 | MF.6   | Registrazione di uno studente        | 2.1<br />2.2<br />2.3                   |
 | MF.7   | Creazione di un gruppo               | 4.1<br />4.2<br />4.3<br />4.4<br />4.5 |
 | MF.8   | Conferma partecipazione ad un gruppo | 4.6                                     |
-| MF.9   | Modifica di un elaborato             | 5.1<br />5.2<br />5.3<br />5.4<br />    |
+| MF.9   | Creazione di un nuovo elaborato      | 5.1<br />5.2<br />5.3<br />5.4<br />    |
+| MF.10  | Modifica di un elaborato             | 5.1<br />5.2<br />5.3<br />5.4<br />    |
 
 ## Scenari
 
@@ -304,9 +305,19 @@ ___
 | **Assunzioni**                           | Lo studente 2 ha già effettuato il login, lo studente ha almeno un invito a prendere parte in un gruppo |
 | **Descrizione colloquio dello scenario** | - Lo studente chiede di visualizzare la lista degli inviti a prendere parte in un gruppo.<br />- Il sistema mostra tutti gli inviti.<br />- Lo studente seleziona l'invito che gli interessa.<br />- Il sistema mostra il nome del gruppo selezionato e le credenziali dei suoi membri.<br />- Lo studente rifiuta l'invito, allegando eventuali motivazioni.<br />- Il sistema comunica il buon esito dell'operazione. |
 
-### Scenari MF.9 - Modifica di un elaborato
+### Scenari MF.9 - Creazione di un nuovo elaborato
 
 | Scenario                                 | SC.9.1                                   |
+| ---------------------------------------- | ---------------------------------------- |
+| **Scopo**                                | Creazione di un nuovo elaborato          |
+| **Utenti coinvolti**                     | Studente 1                               |
+| **Assunzioni**                           | Lo studente 1 ha già effettuato il login |
+| **Descrizione colloquio dello scenario** | - Lo studente chiede al sistema di creare un nuovo elaborato.<br />- Il sistema mostra la lista delle tracce disponibili.<br />- Lo studente sceglie la traccia a cui è interessato.<br />- Il sistema conferma il buon esito dell'operazione. |
+
+___
+### Scenari MF.10 - Modifica di un elaborato
+
+| Scenario                                 | SC.10.1                                   |
 | ---------------------------------------- | ---------------------------------------- |
 | **Scopo**                                | Modifica di un elaborato - upload diretto |
 | **Utenti coinvolti**                     | Studente 1                               |
@@ -315,7 +326,7 @@ ___
 
 ___
 
-| Scenario                                 | SC.9.2                                   |
+| Scenario                                 | SC.10.2                                   |
 | ---------------------------------------- | ---------------------------------------- |
 | **Scopo**                                | Modifica di un elaborato - inserimento link di esterno |
 | **Utenti coinvolti**                     | Studente 2                               |
@@ -323,7 +334,7 @@ ___
 | **Descrizione colloquio dello scenario** | - Lo studente chiede al sistema di mostrare la lista degli elaborati del gruppo di cui fa parte.<br />- Il sistema mostra la lista degli elaborati.<br />- Lo studente chiede al sistema di inserire un nuovo documento.<br />- Il sistema chiede la modalità di caricamento del documento.<br />- Lo studente sceglie di caricare un link ad un documento di Google Drive ed inserisce il link.<br />- Il sistema conferma il buon esito dell'operazione. |
 ___
 
-| Scenario                                 | SC.9.3                                                                                                                                                                                          |
+| Scenario                                 | SC.10.3                                                                                                                                                                                          |
 | ---------------------------------------- | ----------------------------------------                                                                                                                                                        |
 | **Scopo**                                | Modifica di un elaborato - nessun elaborato prodotto                                                                                                                                            |
 | **Utenti coinvolti**                     | Studente 3                                                                                                                                                                                      |
