@@ -121,7 +121,8 @@ Le sezioni 1 e 4 sono navigabili anche da utenti non loggati.
 | MF.6   | Registrazione di uno studente        | 2.1<br />2.2<br />2.3                   |
 | MF.7   | Creazione di un gruppo               | 4.1<br />4.2<br />4.3<br />4.4<br />4.5 |
 | MF.8   | Conferma partecipazione ad un gruppo | 4.6                                     |
-| MF.9   | Modifica di un elaborato             | 5.1<br />5.2<br />5.3<br />5.4<br />    |
+| MF.9   | Creazione di un nuovo elaborato      | 5.1<br />5.2<br />5.3<br />5.4<br />    |
+| MF.10  | Modifica di un elaborato             | 5.1<br />5.2<br />5.3<br />5.4<br />    |
 
 ## Scenari
 
@@ -297,6 +298,16 @@ ___
 | **Descrizione colloquio dello scenario** | - Lo studente chiede di visualizzare la lista degli inviti a prendere parte in un gruppo.<br />- Il sistema mostra tutti gli inviti.<br />- Lo studente seleziona l'invito che gli interessa.<br />- Il sistema mostra il nome del gruppo selezionato e le credenziali dei suoi membri.<br />- Lo studente rifiuta l'invito, allegando eventuali motivazioni.<br />- Il sistema comunica il buon esito dell'operazione. |
 ___
 
+### Scenari MF.9 - Creazione di un nuovo elaborato
+
+| Scenario                                 | SC.9.1                                   |
+| ---------------------------------------- | ---------------------------------------- |
+| **Scopo**                                | Creazione di un nuovo elaborato          |
+| **Utenti coinvolti**                     | Studente 1                               |
+| **Assunzioni**                           | Lo studente 1 ha già effettuato il login |
+| **Descrizione colloquio dello scenario** | - Lo studente chiede al sistema di creare un nuovo elaborato.<br />- Il sistema mostra la lista delle tracce disponibili.<br />- Lo studente sceglie la traccia a cui è interessato.<br />- Il sistema conferma il buon esito dell'operazione. |
+
+___
 ### Scenari MF.9 - Modifica di un elaborato
 
 | Scenario                                 | SC.9.1                                   |
@@ -304,7 +315,7 @@ ___
 | **Scopo**                                | Modifica di un elaborato - upload diretto |
 | **Utenti coinvolti**                     | Studente 1                               |
 | **Assunzioni**                           | Lo studente 1 ha già effettuato il login |
-| **Descrizione colloquio dello scenario** | - Lo studente chiede al sistema di mostrare la lista degli elaborati del gruppo di cui fa parte.<br />- Il sistema mostra la lista degli elaborati, eventualmente vuota.<br />- Lo studente chiede al sistema di inserire un nuovo documento.<br />- Il sistema chiede la modalità di caricamento del documento.<br />- Lo studente sceglie l'upload diretto e seleziona il file .pdf da caricare.<br />- Il sistema conferma il buon esito dell'operazione. |
+| **Descrizione colloquio dello scenario** | - Lo studente chiede al sistema di mostrare la lista degli elaborati del gruppo di cui fa parte.<br />- Il sistema mostra la lista degli elaborati.<br />- Lo studente chiede al sistema di inserire un nuovo documento.<br />- Il sistema chiede la modalità di caricamento del documento.<br />- Lo studente sceglie l'upload diretto e seleziona il file .pdf da caricare.<br />- Il sistema conferma il buon esito dell'operazione. |
 
 ___
 
@@ -313,6 +324,6 @@ ___
 | **Scopo**                                | Modifica di un elaborato - inserimento link di Google Drive |
 | **Utenti coinvolti**                     | Studente 2                               |
 | **Assunzioni**                           | Lo studente 2 ha già effettuato il login |
-| **Descrizione colloquio dello scenario** | - Lo studente chiede al sistema di mostrare la lista degli elaborati del gruppo di cui fa parte.<br />- Il sistema mostra la lista degli elaborati, eventualmente vuota.<br />- Lo studente chiede al sistema di inserire un nuovo documento.<br />- Il sistema chiede la modalità di caricamento del documento.<br />- Lo studente sceglie di caricare un link ad un documento di Google Drive ed inserisce il link.<br />- Il sistema conferma il buon esito dell'operazione. |
+| **Descrizione colloquio dello scenario** | - Lo studente chiede al sistema di mostrare la lista degli elaborati del gruppo di cui fa parte.<br />- Il sistema mostra la lista degli elaborati.<br />- Lo studente chiede al sistema di inserire un nuovo documento.<br />- Il sistema chiede la modalità di caricamento del documento.<br />- Lo studente sceglie di caricare un link ad un documento di Google Drive ed inserisce il link.<br />- Il sistema conferma il buon esito dell'operazione. |
 
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
