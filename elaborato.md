@@ -132,7 +132,7 @@ Le sezioni 1 e 4 sono navigabili anche da utenti non loggati.
 | **Scopo**                                | Aggiunta di un nuovo account tutor       |
 | **Utenti coinvolti**                     | Docente 1                                |
 | **Assunzioni**                           | Il docente 1 è in possesso di un account abilitato |
-| **Descrizione colloquio dello scenario** | - Il docente, usando il suo web browser si collega alla piattaforma.<br />- La piattaforma chiede, tramite un form, le credenziali di accesso.<br />- Il docente effettua il login.<br />- Il docente preme sul pulsante per l'aggiunta di un nuovo account tutor.<br />- Il sistema chiede al docente di compilare un form con i dati del tutor.<br />- Il docente conferma l'operazione. |
+| **Descrizione colloquio dello scenario** | - La piattaforma chiede le credenziali di accesso.<br />- Il docente comunica al sistema il suo username e la password.<br />- Il docente chiede al sistema di aggiungere un nuovo account tutor.<br />- Il sistema chiede al docente i dati del tutor.<br />- Il docente conferma l'operazione. <br/>- Il sistema comunica il buon esito del sistema |
 ___
 
 | Scenario                                 | SC.1.2                                   |
@@ -140,9 +140,16 @@ ___
 | **Scopo**                                | Aggiunta di un nuovo account tutor - dati di login non corretti |
 | **Utenti coinvolti**                     | Docente 2                                |
 | **Assunzioni**                           | Il docente 2 è in possesso di un account abilitato |
-| **Descrizione colloquio dello scenario** | - Il docente, usando il suo web browser si collega alla piattaforma.<br />- La piattaforma chiede, tramite un form, le credenziali di accesso.<br />- Il docente effettua il login.<br />- Il sistema avvisa il docente che i dati forniti per il log in non sono validi.<br />- Il sistema reindirizza il web browser alla schermata di login. |
+| **Descrizione colloquio dello scenario** | - La piattaforma chiede le credenziali di accesso.<br />- Il docente comunica al sistema il suo username e la password.<br />- Il sistema avvisa il docente che i dati forniti non sono validi. |
 
 ___
+
+| Scenario                                 | SC.1.3                                   |
+| ---------------------------------------- | ---------------------------------------- |
+| **Scopo**                                | Aggiunta di un nuovo account tutor - il tutor già esiste |
+| **Utenti coinvolti**                     | Docente 3                                |
+| **Assunzioni**                           | Il docente 3 è in possesso di un account abilitato |
+| **Descrizione colloquio dello scenario** | - La piattaforma chiede le credenziali di accesso.<br />- Il docente comunica al sistema il suo username e la password.<br />- Il docente chiede al sistema di aggiungere un nuovo account tutor.<br />- Il sistema chiede al docente i dati del tutor.<br />- Il docente conferma l'operazione. <br/>- Il sistema comunica al docente che il tutor già esiste. |
 
 ### Scenari MF.3 - Aggiunta di un nuovo studente alla piattaforma 
 
