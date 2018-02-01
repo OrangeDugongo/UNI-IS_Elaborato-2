@@ -4,7 +4,7 @@ Sono previsti servizi per studenti, docenti e tutor. Docenti e tutor definiscono
 
 ## Concetti utili per strutturare il testo
 
-È richiesto di implementare un sito web per la gestione del corso di ingegneria informatica. Il sito web deve gestire l'accesso a tre tipologie di utenti; gli studenti, i docenti e i tutor. Gli account dei docenti possono essere creati solo dal gestore del sito. Un docente può creare un account tutor. I docenti e i tutor possono invitare gli studenti a partecipare tramite una mail. Gli studenti possono richiedere l'accesso al sistema dando la loro mail al docente o al tutor a lezione, o compilando un form sul sito.
+È richiesto di implementare un sito web per la gestione del corso di ingegneria informatica. Il sito web deve gestire l'accesso a tre tipologie di utenti; gli studenti, i docenti e i tutor. Gli account dei docenti possono essere creati solo dal gestore del sito. Un docente può creare un account tutor. I docenti e i tutor possono abilitare gli account studenti. Gli studenti possono registrarsi alla piattaforma compilando un form con i propri dati; l'account prima di essere funzionante deve essere abilitato da un docente o da un tutor.
 
 Il sito è diviso in quattro sezioni:
 
@@ -19,17 +19,17 @@ Le sezioni 1 e 4 sono navigabili anche da utenti non loggati.
 
 ## Glossario
 
-| Termini                    | Eventuali sinonimi | Definizione                              |
-| -------------------------- | ------------------ | ---------------------------------------- |
-| **Tipologie di utenti**    | Tipi di account    | Gli utenti che interagiscono con il sistema sono divisi in varie tipologie in base alla quali vengono abilitati diversi componenti.<br />Le tipologie sono:<br />	- Studente<br />	- Docente<br />	- Tutor |
-| **Form**                   |                    | Campo per la sottomissione di dati       |
-| **Sezioni**                | Aree               | Le vari componenti di cui si compone il sito.<br />Il sito è diviso nelle seguenti aree tematiche:<br />	- Informazioni sul corso<br />	- Materiali didattici<br />	- Esercitazioni<br />	- News ed eventi |
-| **Gruppo**                 |                    | Insieme di studenti. I gruppi standard sono costituiti da tre membri. Vene possono prendere parte anche di più(o di meno), ma devono essere approvati. |
-| **Elaborato**              |                    | Lavoro prodotto da un gruppo.            |
-| **Navigare**               | Accesso            | Consultare le aree tematiche del sito.   |
-| **Apportare modifiche**    |                    | Aggiungere, modificare ed rimuovere contenuti dal sito web. |
-| **Utenti non loggati**     |                    | Visitatori della pagina web che non hanno effettuato nessun tipo di autenticazione. |
-| **Piattaforma**            | Sito web, sistema  | Il sistema preso in esame(?).            |
+| Termini                   | Eventuali sinonimi | Definizione                              |
+| ------------------------- | ------------------ | ---------------------------------------- |
+| **Tipologie di utenti**   | Tipi di account    | Gli utenti che interagiscono con il sistema sono divisi in varie tipologie in base alla quali vengono abilitati diversi componenti.<br />Le tipologie sono:<br />	- Studente<br />	- Docente<br />	- Tutor |
+| **Sezioni**               | Aree               | Le vari componenti di cui si compone il sito.<br />Il sito è diviso nelle seguenti aree tematiche:<br />	- Informazioni sul corso<br />	- Materiali didattici<br />	- Esercitazioni<br />	- News ed eventi |
+| **Gruppo**                |                    | Insieme di studenti. I gruppi standard sono costituiti da tre membri. Vene possono prendere parte anche di più(o di meno), ma devono essere approvati. |
+| **Elaborato**             |                    | Lavoro prodotto da un gruppo.            |
+| **Navigare**              | Accesso            | Consultare le aree tematiche del sito.   |
+| **Apportare modifiche**   |                    | Aggiungere, modificare ed rimuovere contenuti dal sito web. |
+| **Utenti non loggati**    |                    | Visitatori della pagina web che non hanno effettuato nessun tipo di autenticazione. |
+| **Piattaforma**           | Sito web, sistema  | Il sistema preso in esame(?).            |
+| **Account non abilitato** |                    | Un account a cui è concesso accedere al sistema, ma non alle aree riservate. |
 
 ## Requisiti
 
@@ -41,25 +41,15 @@ Le sezioni 1 e 4 sono navigabili anche da utenti non loggati.
 
      3.  Il docente conferma l'operazione
 
-     4.  Il tutor riceve l'invito via email
+2.   Registrazione di uno studente
 
-     5.  Il tutor effettua il login utilizzando i dati temporanei ricevuti per email
+     1.  Lo studente si collega alla pagina per il log up
 
-     6.  Il tutor cambia la password
+     2.  Lo studente inserisce i propri dati nel sistema
 
-2.   Creazione di un account studente
+     3.  Lo studente conferma l'operazione
 
-     1.  Lo studente comunica la propria mail ad un docente o ad un tutor
-
-     2.  Il docente o il tutor compila un form con la mail dello studente
-
-     3.  Il docente o il tutor conferma l'operazione
-
-     4.  Lo studente riceve un invito tramite mail
-
-     5.  Lo studente compila il form con i suoi dati
-
-     6.  Lo studente conferma l'operazione
+     4.  Il docente o il tutor approva o meno l'account dello studente
 
 3.   Modifica degli elementi di una sezione
 
@@ -99,7 +89,7 @@ Le sezioni 1 e 4 sono navigabili anche da utenti non loggati.
 
      3.  Lo studente sceglie la modalità di modifica dell'elaborato
 
-     4.  Lo studente carica il documento dell'elaborato sul sito. La piattaforma accetta file con estensione .pdf oppure un link che rimanda ad un documento di Google Drive Il docente o il tutor possono inserire dei commenti relativi agli elaborati caricati da ogni gruppo
+     4.  Lo studente può aggiungere e/o modificare i documenti. La piattaforma accetta l'upload diretto dei file oppure un link esterno che rimanda ad un documento di Google Drive o ad un altro servizio di cloud storage. I docente e i tutor possono inserire dei commenti relativi agli elaborati caricati da ogni gruppo
 
      5.  Gli studenti che fanno parte di un gruppo attivato ricevono un messaggio automatico ogni volte che il docente o il tutor inseriscono un commento al loro elaborato
 
@@ -107,36 +97,31 @@ Le sezioni 1 e 4 sono navigabili anche da utenti non loggati.
 
 ### Docente
 
-| Codice | Obiettivo primario                 | Riferimento           |
-| ------ | ---------------------------------- | --------------------- |
-| MF.1   | Aggiunta di un nuovo account tutor | 1.1<br />1.2<br />1.3 |
+| Codice | Obiettivo primario                 | Riferimento                             |
+| ------ | ---------------------------------- | --------------------------------------- |
+| MF.1   | Aggiunta di un nuovo account tutor | 1.1<br />1.2<br />1.3                   |
+| MF.2   | Approvazione di uno studente       | 2.4                                     |
+| MF.3   | Modifica di una sezione            | 3.1<br />3.2<br />3.3<br />3.4<br />3.5 |
+| MF.4   | Approvazione di un gruppo          | 4.8                                     |
+| MF.5   | Commentare il lavoro di un gruppo  | 5.5                                     |
 
 ### Tutor
 
-| Codice | Obiettivo primario                       | Riferimento                             |
-| ------ | ---------------------------------------- | --------------------------------------- |
-| MF.2   | Aggiunta di un nuovo studente alla piattaforma | 2.2<br />2.3                            |
-| MF.3   | Modifica di una sezione                  | 3.1<br />3.2<br />3.3<br />3.4<br />3.5 |
-| MF.4   | Approvazione di un gruppo                | 4.8                                     |
-| MF.5   | Commentare il lavoro di un gruppo        | 5.5                                     |
-
-### Docente
-
-| Codice | Obiettivo primario                       | Riferimento                             |
-| ------ | ---------------------------------------- | --------------------------------------- |
-| MF.2   | Aggiunta di un nuovo studente alla piattaforma | 2.2<br />2.3                            |
-| MF.3   | Modifica di una sezione                  | 3.1<br />3.2<br />3.3<br />3.4<br />3.5 |
-| MF.4   | Approvazione di un gruppo                | 4.8                                     |
-| MF.5   | Commentare il lavoro di un gruppo        | 5.5                                     |
+| Codice | Obiettivo primario                | Riferimento                             |
+| ------ | --------------------------------- | --------------------------------------- |
+| MF.2   | Approvazione di uno studente      | 2.4                                     |
+| MF.3   | Modifica di una sezione           | 3.1<br />3.2<br />3.3<br />3.4<br />3.5 |
+| MF.4   | Approvazione di un gruppo         | 4.8                                     |
+| MF.5   | Commentare il lavoro di un gruppo | 5.5                                     |
 
 ### Studente
 
-| Codice | Obiettivo primario                   | Riferimento                                      |
-| ------ | ------------------------------------ | ----------------------------------------         |
-| MF.6   | Creazione di un account studente     | 2.1<br />2.4<br />2.5<br />2.6                   |
-| MF.7   | Creazione di un gruppo               | 4.1<br />4.2<br />4.3<br />4.4<br />4.5<br />4.7 |
-| MF.8   | Conferma partecipazione ad un gruppo | 4.6                                              |
-| MF.9   | Modifica di un elaborato             | 5.1<br />5.2<br />5.3<br />5.4<br />             |
+| Codice | Obiettivo primario                   | Riferimento                             |
+| ------ | ------------------------------------ | --------------------------------------- |
+| MF.6   | Registrazione di uno studente        | 2.1<br />2.2<br />2.3                   |
+| MF.7   | Creazione di un gruppo               | 4.1<br />4.2<br />4.3<br />4.4<br />4.5 |
+| MF.8   | Conferma partecipazione ad un gruppo | 4.6                                     |
+| MF.9   | Modifica di un elaborato             | 5.1<br />5.2<br />5.3<br />5.4<br />    |
 
 ## Scenari
 
@@ -159,6 +144,29 @@ ___
 
 ___
 
+| Scenario                                 | SC.1.3                                   |
+| ---------------------------------------- | ---------------------------------------- |
+| **Scopo**                                | Aggiunta di un nuovo account tutor - l'account tutor non viene attivato |
+| **Utenti coinvolti**                     | Docente 3                                |
+| **Assunzioni**                           | Il docente 3 è in possesso di un account abilitato |
+| **Descrizione colloquio dello scenario** | - Il docente, usando il suo web browser si collega alla piattaforma.<br />- La piattaforma chiede, tramite un form, le credenziali di accesso.<br />- Il docente effettua il login.<br />- Il docente preme sul pulsante per l'aggiunta di un nuovo account tutor.<br />- Il sistema chiede al docente di compilare un form con i dati del tutor.<br />- Il docente conferma l'operazione.<br />- Il sistema avvisa che sono passati tre giorni dalla creazione dell'account tutor, ma che ancora non è stato attivato dal tutor. |
+
+### Scenari MF.2 - Primo accesso di un tutor 
+
+| Scenario                                 | SC.2.1                                                                                                                                                                                                                                                                                                                                                     |
+| ---------------------------------------- | ----------------------------------------                                                                                                                                                                                                                                                                                                                   |
+| **Scopo**                                | Primo accesso di un tutor                                                                                                                                                                                                                                                                                                                                  |
+| **Utenti coinvolti**                     | Tutor 1                                                                                                                                                                                                                                                                                                                                                    |
+| **Assunzioni**                           | Il tutor 1 ha ricevuto l' e-mail con i dati di accesso temporanei                                                                                                                                                                                                                                                                                          |
+| **Descrizione colloquio dello scenario** | - Il tutor, usando il suo web browser si collega alla piattaforma.<br />- La piattaforma chiede, tramite un form, le credenziali di accesso.<br />- Il tutor effettua il login.<br />- Il sistema da il benvenuto al tutor.<br />- Il sistema chiede all'utente di cambiare password.<br />- Il tutor inserisce la nuova password e completa l'operazione. |
+___
+
+| Scenario                                 | SC.2.2                                   |
+| ---------------------------------------- | ---------------------------------------- |
+| **Scopo**                                | Primo accesso di un tutor - Le credenziali temporanee sono scadute |
+| **Utenti coinvolti**                     | Tutor 2                                  |
+| **Assunzioni**                           | Il tutor 2 ha ricevuto l' e-mail con i dati di accesso temporanei |
+| **Descrizione colloquio dello scenario** | - Il tutor, usando il web suo browser si collega alla piattaforma.<br />- La piattaforma chiede, tramite un form, le credenziali di accesso.<br />- Il tutor effettua il login.<br />- Il sistema comunica al tutor che le sue credenziali temporanee sono scadute, e lo invita a contattare il docente di riferimento per risolvere il problema. |
 ### Scenari MF.3 - Aggiunta di un nuovo studente alla piattaforma 
 
 | Scenario                                 | SC.3.1                                   |
@@ -168,6 +176,13 @@ ___
 | **Assunzioni**                           | L'amministratore 1 è in possesso dei dati dello studente |
 | **Descrizione colloquio dello scenario** | - L'amministratore, usando il suo web browser si collega alla piattaforma.<br />- La piattaforma chiede, tramite un form, le credenziali di accesso.<br />- L'amministratore effettua il login.<br />- L'amministratore preme sul pulsante per l'aggiunta di un nuovo studente.<br />- Il sistema chiede, tramite un form, di inserire i dati dello studente.<br />- L'amministratore compila il form e completa l'operazione.<br />- Il sistema informa l'amministratore del buon esito dell'operazione. |
 ___
+
+| Scenario                                 | SC.3.2                                   |
+| ---------------------------------------- | ---------------------------------------- |
+| **Scopo**                                | Aggiunta di un nuovo studente alla piattaforma - invito di un nuovo studente, lo studente già esiste |
+| **Utenti coinvolti**                     | Amministratore 2                         |
+| **Assunzioni**                           | L'amministratore 2 è in possesso dei dati dello studente |
+| **Descrizione colloquio dello scenario** | - L'amministratore, usando il suo web browser si collega alla piattaforma.<br />- La piattaforma chiede, tramite un form, le credenziali di accesso.<br />- L'amministratore effettua il login.<br />- L'amministratore preme sul pulsante per l'aggiunta di un nuovo studente.<br />- Il sistema chiede, tramite un form, di inserire i dati dello studente.<br />- L'amministratore compila il form e completa l'operazione.<br />- Il sistema informa l'amministratore che i dati inseriti corrispondono ad un utente già presente nel sistema |
 
 | Scenario                                 | SC.3.3                                   |
 | ---------------------------------------- | ---------------------------------------- |
@@ -185,13 +200,20 @@ ___
 | **Descrizione colloquio dello scenario** | - L'amministratore sceglie la sezione da modificare.<br />- L'amministratore preme sul pulsante per la modifica.<br />- il sistema reinderizza l'amministratore in un editor per la modifica.<br />- L'amministratore apporta le modifiche.<br />- L'amministratore salva le modifiche.<br />- Il sistema comunica il successo dell'operazione. |
 ___
 
+| Scenario                                 | SC.4.2                                   |
+| ---------------------------------------- | ---------------------------------------- |
+| **Scopo**                                | Modifica di una sezione - Uscita senza salvare |
+| **Utenti coinvolti**                     | Amministratore 2                         |
+| **Assunzioni**                           | L'amministratore 2 ha già effettuato il login |
+| **Descrizione colloquio dello scenario** | - L'amministratore sceglie la sezione da modificare.<br />- L'amministratore preme sul pulsante per la modifica.<br />- il sistema renderizza l'amministratore in un editor per la modifica.<br />- L'amministratore apporta le modifiche.<br />- L'amministratore chiude la pagina senza salvare le modifiche.<br />- Il sistema chiede all'amministratore se effettivamente desidera uscire senza salvare le modifiche.<br />- L'amministratore conferma la propria scelta. |
+___
 
 | Scenario                                 | SC.4.3                                   |
 | ---------------------------------------- | ---------------------------------------- |
 | **Scopo**                                | Modifica di una sezione - Impossibilità ad effettuare la modifica |
 | **Utenti coinvolti**                     | Amministratore 3                         |
 | **Assunzioni**                           | L'amministratore 3 ha già effettuato il login |
-| **Descrizione colloquio dello scenario** | - L'amministratore sceglie la sezione da modificare.<br />- L'amministratore preme sul pulsante per la modifica.<br />- Il sistema avvisa l'amministratore che un altro amministratore già sta apportando modifiche alla sezione.<br />- il sistema chiede all'amministratore di riprovare più tardi. |
+| **Descrizione colloquio dello scenario** | - L'amministratore sceglie la sazione da modificare.<br />- L'amministratore preme sul pulsante per la modifica.<br />- Il sistema avvisa l'amministratore che un altro amministratore già sta apportando modifiche alla sezione.<br />- il sistema chiede all'amministratore di riprovare più tardi. |
 ### Scenari MF.5 - Approvazione di un gruppo 
 
 | Scenario                                 | SC.5.1                                   |
@@ -230,6 +252,14 @@ ___
 | **Utenti coinvolti**                     | Studente 1                               |
 | **Assunzioni**                           |                                          |
 | **Descrizione colloquio dello scenario** | - Lo studente tramite il suo web browser si collega alla pagina per richiedere l'acesso.<br />- Lo studente compila il form inserendo la sua email e preme il pulsante per la conferma.<br />- Il sistema comunica il buon esito dell'operazione.<br />- Lo studente riceve l'invito via email.<br />- Lo studente tramite il link ricevuto via email si collega alla pagina di registrazione.<br />- Lo studente compila un form con tutti i suoi dati e preme il pulsante di conferma.<br />- Il sistema gli comunica il buon esito dell'operazione e lo reindirizza alla home page del sito. |
+___
+
+| Scenario                                 | SC.7.2                                   |
+| ---------------------------------------- | ---------------------------------------- |
+| **Scopo**                                | Creazione di un account studente - email comunicata verbalmente |
+| **Utenti coinvolti**                     | Studente 2                               |
+| **Assunzioni**                           | Lo studente 2 ha comunicato verbalmente la sua email ad un amministratore |
+| **Descrizione colloquio dello scenario** | - Lo studente riceve l'invito via email.<br />- Lo studente tramite il link ricevuto via email si collega alla pagina di registrazione.<br />- Lo studente compila un form con tutti i suoi dati e preme il pulsante di conferma.<br />- Il sistema gli comunica il buon esito dell'operazione e lo reindirizza alla home page del sito. |
 ___
 
 | Scenario                                 | SC.7.3                                   |
@@ -278,7 +308,7 @@ ___
 
 | Scenario                                 | SC.9.2                                   |
 | ---------------------------------------- | ---------------------------------------- |
-| **Scopo**                                | Conferma partecipazione ad un gruppo - rifiuto dello studente |
+| **Scopo**                                | Conferma partecipazione ad un gruppo - rifuito dello studente |
 | **Utenti coinvolti**                     | Studente 2                               |
 | **Assunzioni**                           | Lo studente 2 ha già effettuato il login |
 | **Descrizione colloquio dello scenario** | - Lo studente riceve la notifica di partecipazione ad un gruppo.<br />- Lo studente clicca sulla notifica.<br />- Il sistema apre una pagina con il nome del gruppo e la lista dei partecipati.<br />- Lo studente clicca sul pulsante per rifiutare la partecipazione.<br />- Il sistema conferma il buon esito dell'operazione. |
