@@ -159,29 +159,6 @@ ___
 
 ___
 
-| Scenario                                 | SC.1.3                                   |
-| ---------------------------------------- | ---------------------------------------- |
-| **Scopo**                                | Aggiunta di un nuovo account tutor - l'account tutor non viene attivato |
-| **Utenti coinvolti**                     | Docente 3                                |
-| **Assunzioni**                           | Il docente 3 è in possesso di un account abilitato |
-| **Descrizione colloquio dello scenario** | - Il docente, usando il suo web browser si collega alla piattaforma.<br />- La piattaforma chiede, tramite un form, le credenziali di accesso.<br />- Il docente effettua il login.<br />- Il docente preme sul pulsante per l'aggiunta di un nuovo account tutor.<br />- Il sistema chiede al docente di compilare un form con i dati del tutor.<br />- Il docente conferma l'operazione.<br />- Il sistema avvisa che sono passati tre giorni dalla creazione dell'account tutor, ma che ancora non è stato attivato dal tutor. |
-
-### Scenari MF.2 - Primo accesso di un tutor 
-
-| Scenario                                 | SC.2.1                                   |
-| ---------------------------------------- | ---------------------------------------- |
-| **Scopo**                                | Primo accesso di un tutor                |
-| **Utenti coinvolti**                     | Tutor 1                                  |
-| **Assunzioni**                           | Il tutor 1 ha ricevuto l' e-mail con i dati di accesso temporanei |
-| **Descrizione colloquio dello scenario** | - Il tutor, usando il suo web browser si collega alla piattaforma.<br />- La piattaforma chiede, tramite un form, le credenziali di accesso.<br />- Il tutor effettua il login.<br />- Il sistema da il benvenuto al tutor.<br />- Il sistema chiede all'utente di cambiare password.<br />- Il tutor inserisce la nuova password e completa l'operazione. |
-___
-
-| Scenario                                 | SC.2.2                                   |
-| ---------------------------------------- | ---------------------------------------- |
-| **Scopo**                                | Primo accesso di un tutor - Le credenziali temporanee sono scadute |
-| **Utenti coinvolti**                     | Tutor 2                                  |
-| **Assunzioni**                           | Il tutor 2 ha ricevuto l' e-mail con i dati di accesso temporanei |
-| **Descrizione colloquio dello scenario** | - Il tutor, usando il web suo browser si collega alla piattaforma.<br />- La piattaforma chiede, tramite un form, le credenziali di accesso.<br />- Il tutor effettua il login.<br />- Il sistema comunica al tutor che le sue credenziali temporanee sono scadute, e lo invita a contattare il docente di riferimento per risolvere il problema. |
 ### Scenari MF.3 - Aggiunta di un nuovo studente alla piattaforma 
 
 | Scenario                                 | SC.3.1                                   |
@@ -215,20 +192,13 @@ ___
 | **Descrizione colloquio dello scenario** | - L'amministratore sceglie la sezione da modificare.<br />- L'amministratore preme sul pulsante per la modifica.<br />- il sistema reinderizza l'amministratore in un editor per la modifica.<br />- L'amministratore apporta le modifiche.<br />- L'amministratore salva le modifiche.<br />- Il sistema comunica il successo dell'operazione. |
 ___
 
-| Scenario                                 | SC.4.2                                   |
-| ---------------------------------------- | ---------------------------------------- |
-| **Scopo**                                | Modifica di una sezione - Uscita senza salvare |
-| **Utenti coinvolti**                     | Amministratore 2                         |
-| **Assunzioni**                           | L'amministratore 2 ha già effettuato il login |
-| **Descrizione colloquio dello scenario** | - L'amministratore sceglie la sezione da modificare.<br />- L'amministratore preme sul pulsante per la modifica.<br />- il sistema renderizza l'amministratore in un editor per la modifica.<br />- L'amministratore apporta le modifiche.<br />- L'amministratore chiude la pagina senza salvare le modifiche.<br />- Il sistema chiede all'amministratore se effettivamente desidera uscire senza salvare le modifiche.<br />- L'amministratore conferma la propria scelta. |
-___
 
 | Scenario                                 | SC.4.3                                   |
 | ---------------------------------------- | ---------------------------------------- |
 | **Scopo**                                | Modifica di una sezione - Impossibilità ad effettuare la modifica |
 | **Utenti coinvolti**                     | Amministratore 3                         |
 | **Assunzioni**                           | L'amministratore 3 ha già effettuato il login |
-| **Descrizione colloquio dello scenario** | - L'amministratore sceglie la sazione da modificare.<br />- L'amministratore preme sul pulsante per la modifica.<br />- Il sistema avvisa l'amministratore che un altro amministratore già sta apportando modifiche alla sezione.<br />- il sistema chiede all'amministratore di riprovare più tardi. |
+| **Descrizione colloquio dello scenario** | - L'amministratore sceglie la sezione da modificare.<br />- L'amministratore preme sul pulsante per la modifica.<br />- Il sistema avvisa l'amministratore che un altro amministratore già sta apportando modifiche alla sezione.<br />- il sistema chiede all'amministratore di riprovare più tardi. |
 ### Scenari MF.5 - Approvazione di un gruppo 
 
 | Scenario                                 | SC.5.1                                   |
@@ -267,14 +237,6 @@ ___
 | **Utenti coinvolti**                     | Studente 1                               |
 | **Assunzioni**                           |                                          |
 | **Descrizione colloquio dello scenario** | - Lo studente tramite il suo web browser si collega alla pagina per richiedere l'acesso.<br />- Lo studente compila il form inserendo la sua email e preme il pulsante per la conferma.<br />- Il sistema comunica il buon esito dell'operazione.<br />- Lo studente riceve l'invito via email.<br />- Lo studente tramite il link ricevuto via email si collega alla pagina di registrazione.<br />- Lo studente compila un form con tutti i suoi dati e preme il pulsante di conferma.<br />- Il sistema gli comunica il buon esito dell'operazione e lo reindirizza alla home page del sito. |
-___
-
-| Scenario                                 | SC.7.2                                   |
-| ---------------------------------------- | ---------------------------------------- |
-| **Scopo**                                | Creazione di un account studente - email comunicata verbalmente |
-| **Utenti coinvolti**                     | Studente 2                               |
-| **Assunzioni**                           | Lo studente 2 ha comunicato verbalmente la sua email ad un amministratore |
-| **Descrizione colloquio dello scenario** | - Lo studente riceve l'invito via email.<br />- Lo studente tramite il link ricevuto via email si collega alla pagina di registrazione.<br />- Lo studente compila un form con tutti i suoi dati e preme il pulsante di conferma.<br />- Il sistema gli comunica il buon esito dell'operazione e lo reindirizza alla home page del sito. |
 ___
 
 | Scenario                                 | SC.7.3                                   |
@@ -323,7 +285,7 @@ ___
 
 | Scenario                                 | SC.9.2                                   |
 | ---------------------------------------- | ---------------------------------------- |
-| **Scopo**                                | Conferma partecipazione ad un gruppo - rifuito dello studente |
+| **Scopo**                                | Conferma partecipazione ad un gruppo - rifiuto dello studente |
 | **Utenti coinvolti**                     | Studente 2                               |
 | **Assunzioni**                           | Lo studente 2 ha già effettuato il login |
 | **Descrizione colloquio dello scenario** | - Lo studente riceve la notifica di partecipazione ad un gruppo.<br />- Lo studente clicca sulla notifica.<br />- Il sistema apre una pagina con il nome del gruppo e la lista dei partecipati.<br />- Lo studente clicca sul pulsante per rifiutare la partecipazione.<br />- Il sistema conferma il buon esito dell'operazione. |
