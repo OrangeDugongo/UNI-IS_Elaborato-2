@@ -178,8 +178,6 @@ ___
 | **Assunzioni**                           | Il docente 3 o il tutor 3 ha già effettuato l'accesso |
 | **Descrizione colloquio dello scenario** | - Il docente o il tutor chiede la lista delle approvazioni pendenti.<br />- Il sistema risponde che non c'è alcuna richiesta pendente. |
 
-###  
-
 ### Scenari MF.3 - Modifica di una sezione  
 
 | Scenario                                 | SC.3.1                                   |
@@ -206,8 +204,6 @@ ___
 | **Descrizione colloquio dello scenario** | -Il docente o il tutor chiede al sistema di mostrare le richieste di approvazione dei gruppi pendenti.<br />- Il sistema mostra tutte le richieste pendenti.<br />- Il docente o il tutor seleziona la richiesta a cui è interessato.<br />- Il sistema mostra il nome del gruppo, il numero di membri e le loro credenziali.<br />- Il docente o il tutor sceglie di approvare il gruppo.<br />- Il sistema comunica il buon esito dell'operazione e comunica la decisione del docente o del tutor agli studenti interessati. |
 ___
 
-
-
 | Scenario                                 | SC.4.2                                   |
 | ---------------------------------------- | ---------------------------------------- |
 | **Scopo**                                | Approvazione di un gruppo - Il gruppo non viene approvato |
@@ -233,9 +229,15 @@ ___
 | **Scopo**                                | Registrazione di un account studente     |
 | **Utenti coinvolti**                     | Studente 1                               |
 | **Assunzioni**                           |                                          |
-| **Descrizione colloquio dello scenario** | - Lo studente chiede di potersi registrare.<br />- Il sistema mostra un form di registrazione.<br />- Lo studente inserisce i proprio dati.<br />- Il sistema invia una richiesta di approvazione a tutti i docenti o tutor e comunica il buon esito dell'operazione. |
-
+| **Descrizione colloquio dello scenario** | - Lo studente chiede di potersi registrare.<br />- Il sistema chiede le informazioni necessarie alla autenticazione.<br />- Lo studente inserisce i proprio dati.<br />- Il sistema invia una richiesta di approvazione a tutti i docenti o tutor e comunica il buon esito dell'operazione. |
 ___
+
+| Scenario                                 | SC.6.2                                   |
+| ---------------------------------------- | ---------------------------------------- |
+| **Scopo**                                | Registrazione di un account studente - lo studente già esiste nel sistema |
+| **Utenti coinvolti**                     | Studente 2                               |
+| **Assunzioni**                           |                                          |
+| **Descrizione colloquio dello scenario** | - Lo studente chiede di potersi registrare.<br />- Il sistema chiede le informazioni necessarie alla autenticazione.<br />- Lo studente inserisce i proprio dati.<br />- Il sistema comunica che quella email è già associata ad un accont. |
 
 ### Scenari MF.7 - Creazione di un nuovo gruppo
 
@@ -245,7 +247,6 @@ ___
 | **Utenti coinvolti**                     | Studente 1                               |
 | **Assunzioni**                           | Lo studente 1 ha già effettuato il login |
 | **Descrizione colloquio dello scenario** | - Lo studente chiede al sistema di poter creare un nuovo gruppo.<br />- Il sistema chiede allo studente di inserire il nome del gruppo e il numero di membri.<br />- Lo studente inserisce i dati, con tre come numero di membri.<br />- Il sistema verifica la disponibilità del nome e chiede le credenziali degli studenti da invitare.<br />- Lo studente inserisce i nomi degli studenti da invitare.<br />- Il sistema verifica che tutti gli studenti inseriti siano già iscritti alla piattaforma e non facciano parte di un altro gruppo e chiede conferma.<br />- Lo studente conferma i nomi degli altri membri.<br />- Il sistema invia una comunicazione a tutti gli studenti indicati e comunica il buon esito dell'operazione. |
-
 ___
 
 | Scenario                                 | SC.7.2                                   |
@@ -279,6 +280,13 @@ ___
 | **Descrizione colloquio dello scenario** | - Lo studente chiede al sistema di poter creare un nuovo gruppo.<br />- Il sistema chiede allo studente di inserire il nome del gruppo e il numero di membri.<br />- Lo studente inserisce i dati.<br />- Il sistema verifica la disponibilità del nome e chiede le credenziali degli studenti da invitare.<br />- Lo studente inserisce i nomi degli studenti da invitare.<br />- Il sistema verifica che tutti gli studenti inseriti siano già iscritti alla piattaforma e non facciano parte di un altro gruppo e comunica che uno o più studenti fanno già parte di un gruppo. |
 ___
 
+| Scenario                                 | SC.7.6                                   |
+| ---------------------------------------- | ---------------------------------------- |
+| **Scopo**                                | Creazione di un nuovo gruppo - lo studente fa già parte di un gruppo |
+| **Utenti coinvolti**                     | Studente 6                               |
+| **Assunzioni**                           | Lo studente 6 ha già effettuato il login |
+| **Descrizione colloquio dello scenario** | - Lo studente chiede al sistema di poter creare un nuovo gruppo.<br />- Il sistema informa che già fa parte di un gruppo e che non può essere membro di due gruppi. |
+
 ### Scenari MF.8 -  Conferma partecipazione ad un gruppo 
 
 | Scenario                                 | SC.8.1                                   |
@@ -295,7 +303,6 @@ ___
 | **Utenti coinvolti**                     | Studente 2                               |
 | **Assunzioni**                           | Lo studente 2 ha già effettuato il login, lo studente ha almeno un invito a prendere parte in un gruppo |
 | **Descrizione colloquio dello scenario** | - Lo studente chiede di visualizzare la lista degli inviti a prendere parte in un gruppo.<br />- Il sistema mostra tutti gli inviti.<br />- Lo studente seleziona l'invito che gli interessa.<br />- Il sistema mostra il nome del gruppo selezionato e le credenziali dei suoi membri.<br />- Lo studente rifiuta l'invito, allegando eventuali motivazioni.<br />- Il sistema comunica il buon esito dell'operazione. |
-___
 
 ### Scenari MF.9 - Modifica di un elaborato
 
@@ -304,15 +311,23 @@ ___
 | **Scopo**                                | Modifica di un elaborato - upload diretto |
 | **Utenti coinvolti**                     | Studente 1                               |
 | **Assunzioni**                           | Lo studente 1 ha già effettuato il login |
-| **Descrizione colloquio dello scenario** | - Lo studente chiede al sistema di mostrare la lista degli elaborati del gruppo di cui fa parte.<br />- Il sistema mostra la lista degli elaborati, eventualmente vuota.<br />- Lo studente chiede al sistema di inserire un nuovo documento.<br />- Il sistema chiede la modalità di caricamento del documento.<br />- Lo studente sceglie l'upload diretto e seleziona il file .pdf da caricare.<br />- Il sistema conferma il buon esito dell'operazione. |
+| **Descrizione colloquio dello scenario** | - Lo studente chiede al sistema di mostrare la lista degli elaborati del gruppo di cui fa parte.<br />- Il sistema mostra la lista degli elaborati.<br />- Lo studente chiede al sistema di inserire un nuovo documento.<br />- Il sistema chiede la modalità di caricamento del documento.<br />- Lo studente sceglie l'upload diretto e seleziona il file .pdf da caricare.<br />- Il sistema conferma il buon esito dell'operazione. |
 
 ___
 
 | Scenario                                 | SC.9.2                                   |
 | ---------------------------------------- | ---------------------------------------- |
-| **Scopo**                                | Modifica di un elaborato - inserimento link di Google Drive |
+| **Scopo**                                | Modifica di un elaborato - inserimento link di esterno |
 | **Utenti coinvolti**                     | Studente 2                               |
 | **Assunzioni**                           | Lo studente 2 ha già effettuato il login |
-| **Descrizione colloquio dello scenario** | - Lo studente chiede al sistema di mostrare la lista degli elaborati del gruppo di cui fa parte.<br />- Il sistema mostra la lista degli elaborati, eventualmente vuota.<br />- Lo studente chiede al sistema di inserire un nuovo documento.<br />- Il sistema chiede la modalità di caricamento del documento.<br />- Lo studente sceglie di caricare un link ad un documento di Google Drive ed inserisce il link.<br />- Il sistema conferma il buon esito dell'operazione. |
+| **Descrizione colloquio dello scenario** | - Lo studente chiede al sistema di mostrare la lista degli elaborati del gruppo di cui fa parte.<br />- Il sistema mostra la lista degli elaborati.<br />- Lo studente chiede al sistema di inserire un nuovo documento.<br />- Il sistema chiede la modalità di caricamento del documento.<br />- Lo studente sceglie di caricare un link ad un documento di Google Drive ed inserisce il link.<br />- Il sistema conferma il buon esito dell'operazione. |
+___
+
+| Scenario                                 | SC.9.3                                                                                                                                                                                          |
+| ---------------------------------------- | ----------------------------------------                                                                                                                                                        |
+| **Scopo**                                | Modifica di un elaborato - nessun elaborato prodotto                                                                                                                                            |
+| **Utenti coinvolti**                     | Studente 3                                                                                                                                                                                      |
+| **Assunzioni**                           | Lo studente 3 ha già effettuato il login                                                                                                                                                        |
+| **Descrizione colloquio dello scenario** | - Lo studente chiede al sistema di mostrare la lista degli elaborati del gruppo di cui fa parte.<br />- Il sistema avvisa che il gruppo di cui fa parte ancora non ha prodotto alcun elaborato. |
 
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
