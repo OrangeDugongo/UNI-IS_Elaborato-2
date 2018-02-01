@@ -169,13 +169,6 @@ ___
 | **Descrizione colloquio dello scenario** | - L'amministratore, usando il suo web browser si collega alla piattaforma.<br />- La piattaforma chiede, tramite un form, le credenziali di accesso.<br />- L'amministratore effettua il login.<br />- L'amministratore preme sul pulsante per l'aggiunta di un nuovo studente.<br />- Il sistema chiede, tramite un form, di inserire i dati dello studente.<br />- L'amministratore compila il form e completa l'operazione.<br />- Il sistema informa l'amministratore del buon esito dell'operazione. |
 ___
 
-| Scenario                                 | SC.3.2                                   |
-| ---------------------------------------- | ---------------------------------------- |
-| **Scopo**                                | Aggiunta di un nuovo studente alla piattaforma - invito di un nuovo studente, lo studente già esiste |
-| **Utenti coinvolti**                     | Amministratore 2                         |
-| **Assunzioni**                           | L'amministratore 2 è in possesso dei dati dello studente |
-| **Descrizione colloquio dello scenario** | - L'amministratore, usando il suo web browser si collega alla piattaforma.<br />- La piattaforma chiede, tramite un form, le credenziali di accesso.<br />- L'amministratore effettua il login.<br />- L'amministratore preme sul pulsante per l'aggiunta di un nuovo studente.<br />- Il sistema chiede, tramite un form, di inserire i dati dello studente.<br />- L'amministratore compila il form e completa l'operazione.<br />- Il sistema informa l'amministratore che i dati inseriti corrispondono ad un utente già presente nel sistema |
-
 | Scenario                                 | SC.3.3                                   |
 | ---------------------------------------- | ---------------------------------------- |
 | **Scopo**                                | Aggiunta di un nuovo studente alla piattaforma - Lo studente non viene accettato**Utenti coinvolti** |
