@@ -23,10 +23,10 @@ Le sezioni 1 e 4 sono navigabili anche da utenti non loggati.
 | ------------------------- | ------------------ | ---------------------------------------- |
 | **Tipologie di utenti**   | Tipi di account    | Gli utenti che interagiscono con il sistema sono divisi in varie tipologie in base alla quali vengono abilitati diversi componenti.<br />Le tipologie sono:<br />	- Studente<br />	- Docente<br />	- Tutor |
 | **Sezioni**               | Aree               | Le vari componenti di cui si compone il sito.<br />Il sito è diviso nelle seguenti aree tematiche:<br />	- Informazioni sul corso<br />	- Materiali didattici<br />	- Esercitazioni<br />	- News ed eventi |
-| **Gruppo**                |                    | Insieme di studenti. I gruppi standard sono costituiti da tre membri. Vene possono prendere parte anche di più(o di meno), ma devono essere approvati. |
+| **Gruppo**                |                    | Insieme di studenti. I gruppi standard sono costituiti da tre membri. Ve ne possono prendere parte anche di più(o di meno), ma devono essere approvati. |
 | **Elaborato**             |                    | Lavoro prodotto da un gruppo.            |
 | **Navigare**              | Accesso            | Consultare le aree tematiche del sito.   |
-| **Apportare modifiche**   |                    | Aggiungere, modificare ed rimuovere contenuti dal sito web. |
+| **Apportare modifiche**   |                    | Aggiungere, modificare e rimuovere contenuti dal sito web. |
 | **Utenti non loggati**    |                    | Visitatori della pagina web che non hanno effettuato nessun tipo di autenticazione. |
 | **Piattaforma**           | Sito web, sistema  | Il sistema preso in esame(?).            |
 | **Account non abilitato** |                    | Un account a cui è concesso accedere al sistema, ma non alle aree riservate. |
@@ -59,7 +59,7 @@ Le sezioni 1 e 4 sono navigabili anche da utenti non loggati.
 
      3.  Il docente o il tutor seleziona la modalità di modifica della sezione
 
-     4.  Il docente o il tutor può scegliere di correggere il testo presente all'interno della pagina, di aggiungerne di nuovo o di scegliere un file locale da caricare sulla piattaforma
+     4.  Il docente o il tutor può scegliere di correggere il testo presente all'interno della pagina, di aggiungere di nuovo o di scegliere un file locale da caricare sulla piattaforma
 
      5.  Il docente o il tutor salva le modifiche apportate
 
@@ -77,7 +77,7 @@ Le sezioni 1 e 4 sono navigabili anche da utenti non loggati.
 
      6.  Gli studenti invitati confermano di voler prendere parte al gruppo
 
-     7.  Se il numero totale di studenti per il gruppo è 3, il gruppo è arrivato
+     7.  Se il numero totale di studenti per il gruppo è 3, il gruppo è attivato
 
      8.  In caso contrario, il gruppo deve essere attivato da un docente o da un tutor. Viene inviato automaticamente un messaggio ai docenti e ai tutor.
 
@@ -89,7 +89,7 @@ Le sezioni 1 e 4 sono navigabili anche da utenti non loggati.
 
      3.  Lo studente sceglie la modalità di modifica dell'elaborato
 
-     4.  Lo studente può aggiungere e/o modificare i documenti. La piattaforma accetta l'upload diretto dei file oppure un link esterno che rimanda ad un documento di Google Drive o ad un altro servizio di cloud storage. I docente e i tutor possono inserire dei commenti relativi agli elaborati caricati da ogni gruppo
+     4.  Lo studente può aggiungere e/o modificare i documenti. La piattaforma accetta l'upload diretto dei file oppure un link esterno che rimanda ad un documento di Google Drive o ad un altro servizio di cloud storage. Il docente e i tutor possono inserire dei commenti relativi agli elaborati caricati da ogni gruppo
 
      5.  Gli studenti che fanno parte di un gruppo attivato ricevono un messaggio automatico ogni volte che il docente o il tutor inseriscono un commento al loro elaborato
 
@@ -167,7 +167,7 @@ ___
 | ---------------------------------------- | ---------------------------------------- |
 | **Scopo**                                | Approvazione di uno studente - la richiesta viene rifiutata |
 | **Utenti coinvolti**                     | Docente 2 o Tutor 2                      |
-| **Assunzioni**                           | Il docente 2 o il tutor 1 ha già effettuato l'accesso |
+| **Assunzioni**                           | Il docente 2 o il tutor 2 ha già effettuato l'accesso |
 | **Descrizione colloquio dello scenario** | - Il docente o il tutor chiede la lista delle approvazioni pendenti.<br />- Il sistema risponde con la lista di tutti gli account studenti in attesa di approvazione.<br />- Il docente o il tutor comunica l'approvazione a cui è interessato <br/>- Il sistema chiede se si vuole approvare o meno l'account.<br />- Il docente o il tutor decide di rifiutare la richiesta.<br />- Il sistema chiede se si vuole inserire una nota con le motivazioni.<br />- Il docente o il tutor comunica al sistema di voler inserire la nota e immette nel sistema le motivazioni.<br />- Il sistema comunica il buon esito dell'operazione. |
 
 ---
@@ -317,7 +317,7 @@ ___
 ___
 ### Scenari MF.10 - Modifica di un elaborato
 
-| Scenario                                 | SC.10.1                                   |
+| Scenario                                 | SC.10.1                                  |
 | ---------------------------------------- | ---------------------------------------- |
 | **Scopo**                                | Modifica di un elaborato - upload diretto |
 | **Utenti coinvolti**                     | Studente 1                               |
@@ -326,19 +326,19 @@ ___
 
 ___
 
-| Scenario                                 | SC.10.2                                   |
+| Scenario                                 | SC.10.2                                  |
 | ---------------------------------------- | ---------------------------------------- |
-| **Scopo**                                | Modifica di un elaborato - inserimento link di esterno |
+| **Scopo**                                | Modifica di un elaborato - inserimento link esterno |
 | **Utenti coinvolti**                     | Studente 2                               |
 | **Assunzioni**                           | Lo studente 2 ha già effettuato il login |
 | **Descrizione colloquio dello scenario** | - Lo studente chiede al sistema di mostrare la lista degli elaborati del gruppo di cui fa parte.<br />- Il sistema mostra la lista degli elaborati.<br />- Lo studente chiede al sistema di inserire un nuovo documento.<br />- Il sistema chiede la modalità di caricamento del documento.<br />- Lo studente sceglie di caricare un link ad un documento di Google Drive ed inserisce il link.<br />- Il sistema conferma il buon esito dell'operazione. |
 ___
 
-| Scenario                                 | SC.10.3                                                                                                                                                                                          |
-| ---------------------------------------- | ----------------------------------------                                                                                                                                                        |
-| **Scopo**                                | Modifica di un elaborato - nessun elaborato prodotto                                                                                                                                            |
-| **Utenti coinvolti**                     | Studente 3                                                                                                                                                                                      |
-| **Assunzioni**                           | Lo studente 3 ha già effettuato il login                                                                                                                                                        |
+| Scenario                                 | SC.10.3                                  |
+| ---------------------------------------- | ---------------------------------------- |
+| **Scopo**                                | Modifica di un elaborato - nessun elaborato prodotto |
+| **Utenti coinvolti**                     | Studente 3                               |
+| **Assunzioni**                           | Lo studente 3 ha già effettuato il login |
 | **Descrizione colloquio dello scenario** | - Lo studente chiede al sistema di mostrare la lista degli elaborati del gruppo di cui fa parte.<br />- Il sistema avvisa che il gruppo di cui fa parte ancora non ha prodotto alcun elaborato. |
 
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
