@@ -133,7 +133,7 @@ Le sezioni 1 e 4 sono navigabili anche da utenti non loggati.
 | **Scopo**                                | Aggiunta di un nuovo account tutor       |
 | **Utenti coinvolti**                     | Docente 1                                |
 | **Assunzioni**                           | Il docente 1 è in possesso di un account abilitato |
-| **Descrizione colloquio dello scenario** | - La piattaforma chiede le credenziali di accesso.<br />- Il docente comunica al sistema il suo username e la password.<br />-Il sistema autorizza il docente<br />- Il docente chiede al sistema di aggiungere un nuovo account tutor.<br />- Il sistema chiede al docente i dati del tutor.<br />- Il docente conferma l'operazione. <br/>- Il sistema comunica il buon esito del sistema |
+| **Descrizione colloquio dello scenario** | - La piattaforma chiede le credenziali di accesso.<br />- Il docente comunica al sistema il suo username e la password.<br />- Il sistema autorizza il docente<br />- Il docente chiede al sistema di aggiungere un nuovo account tutor.<br />- Il sistema chiede al docente i dati del tutor.<br />- Il docente comunica i dati del tutor<br />- Il docente conferma l'operazione. <br/>- Il sistema comunica il buon esito del sistema |
 ___
 
 | Scenario                                 | SC.1.2                                   |
@@ -340,5 +340,42 @@ ___
 | **Utenti coinvolti**                     | Studente 3                               |
 | **Assunzioni**                           | Lo studente 3 ha già effettuato il login |
 | **Descrizione colloquio dello scenario** | - Lo studente chiede al sistema di mostrare la lista degli elaborati del gruppo di cui fa parte.<br />- Il sistema avvisa che il gruppo di cui fa parte ancora non ha prodotto alcun elaborato. |
+
+## Use cases
+
+### UC.1 - Aggiunta di un nuovo account tutor 
+
+| Nome del caso d'uso  | Aggiunta di un nuovo account tutor       |
+| -------------------- | ---------------------------------------- |
+| **Descrizione**      | Descrive il processo che il docente deve compiere per poter aggiungere un tutor |
+| **Precondizione**    | Il docente è in possesso di un account abilitatalo |
+| **Postcondizione**   | Viene creato l'account tutor             |
+| **Scenari astratti** | SC.1.1 - SC.1.2 - SC.1.3                 |
+
+#### Scenario principale 
+
+| Docente                                  | Sistema                                  |
+| ---------------------------------------- | ---------------------------------------- |
+| 1.1 Il docente chiede di accedere al sistema |                                          |
+|                                          | 2.1 Il sistema chiede le credenziali di accesso |
+|                                          |                                          |
+| 3.1 Il docente comunica il suo user name e la password |                                          |
+|                                          | 4.1 Il sistema autentica il docente      |
+| 5.1 Il docente chiede al sistema di aggiungere un nuovo account tutor |                                          |
+|                                          | 6.1 Il sistema chiede i dati del tutor   |
+| 7.1 Il docente comunica i dati del tutor<br />7.2 Il docente conferma l'operazione |                                          |
+|                                          | 8.1 Il sistema comunica il buon esito dell'operazione |
+
+#### Scenario alternativo A1 - Dati di accesso non corretti
+
+| Docente | Sistema                                  |
+| ------- | ---------------------------------------- |
+|         | A1 - 4.1 Il sistema avvisa il docente che i dati inserito non sono validi<br />Ritorno allo scenario principale al passo 2.1 |
+
+#### Scenario alternativo A2 - Il tutor già esiste
+
+| Docente | Sistema                                  |
+| ------- | ---------------------------------------- |
+|         | A2 - 8.1 Il sistema avvisa il docente che i dati inseriti corrispondono ad un tutor già presente nel sistema.<br />Ritorno allo scenario principale al passo 6.1 |
 
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
