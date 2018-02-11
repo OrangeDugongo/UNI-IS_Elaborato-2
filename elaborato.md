@@ -378,4 +378,65 @@ ___
 | ------- | ---------------------------------------- |
 |         | A2 - 8.1 Il sistema avvisa il docente che i dati inseriti corrispondono ad un tutor già presente nel sistema.<br />Ritorno allo scenario principale al passo 6.1 |
 
+### UC.2 - Approvazione di uno studente 
+
+| Nome del caso d'uso  | Approvazione di uno studente             |
+| -------------------- | ---------------------------------------- |
+| **Descrizione**      | Descrive il processo che un docente o un tutor devono eseguire per poter approvare uno studente |
+| **Precondizione**    | Il docente o il tutor ha già eseguito l'autenticazione |
+| **Postcondizione**   |                                          |
+| **Scenari astratti** | SC.2.1 - SC.2.2 - SC.2.3                 |
+
+#### Scenario principale 
+
+| Docente o tutor                          | Sistema                                  |
+| ---------------------------------------- | ---------------------------------------- |
+| 1.1 Il docente o il tutor chiede la lista delle approvazioni pendenti |                                          |
+|                                          | 2.1 Il sistema comunica la lista delle approvazioni pendenti |
+| 3.1 Il docente o il tutor comunica l'approvazione a cui è interessato |                                          |
+|                                          | 4.1 Il sistema chiede se si vuole approvare o meno la richiesta |
+| 5.1 Il docente o il tutor comunica di approvare la richiesta |                                          |
+|                                          | 6.1 Il sistema comunica il buon esito dell'operazione |
+
+#### Scenario alternativo A1 - La richiesta viene rifiutata
+
+| Docente o tutor                          | Sistema                                  |
+| ---------------------------------------- | ---------------------------------------- |
+| A1 - 5.1 Il docente o il tutor comunica di rifiutare la richiesta |                                          |
+|                                          | A1 - 6.1.1 Il sistema chiede se si vuole inserire una nota con le motivazioni |
+| A1 - 7.1 Il docente o il tutor comunica al sistema di voler inserire la nota<br />A1 - 7.2 Il docente o il tutor comunica al sistema le motivazioni |                                          |
+|                                          | A1 - 8.1 - Il sistema comunica il buon esito dell'operazione |
+
+#### Scenario alternativo A2 - Non ci sono richieste pendenti
+
+| Docente o tutor | Sistema                                  |
+| --------------- | ---------------------------------------- |
+|                 | A2 - 2.1.1 Il sistema comunica che non ci sono richieste pendenti |
+
+### UC.3 - Modifica di una sezione
+
+| Nome del caso d'uso  | Modifica di una sezione                  |
+| -------------------- | ---------------------------------------- |
+| **Descrizione**      | Descrive il processo che un docente o un tutor devono eseguire per poter apportare delle modifiche ad una sezione del sito |
+| **Precondizione**    | Il docente o il tutor ha già eseguito l'autenticazione |
+| **Postcondizione**   |                                          |
+| **Scenari astratti** | SC.3.1 - SC.3.2                          |
+
+#### Scenario principale
+
+| Docente o tutor                          | Sistema                                  |
+| ---------------------------------------- | ---------------------------------------- |
+| 1.1 Il docente o il tutor sceglie la sezione da modificare |                                          |
+|                                          | 2.1 Il sistema mostra la sezione scelta  |
+| 3.1 Il docente o il tutor chiede di modificare la sezione |                                          |
+|                                          | 4.1 Il sistema entra nella modalità modifica |
+| 5.1 Il docente o il tutor esegue le modifiche |                                          |
+|                                          | 6.1 Il sistema salva le modifiche<br />6.2 Il sistema comunica il buon esito dell'operazione |
+
+#### Scenario alternativo A1 - Impossibilità ad effettuare la modifica
+
+| Docente o tutor | Sistema                                  |
+| --------------- | ---------------------------------------- |
+|                 | A1 - 4.1.1 Il sistema comunica l'impossibilità di entrane nella modalità modifica<br />A1 - 4.2.1 Il sistema mostra eventuali motivazioni |
+
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
