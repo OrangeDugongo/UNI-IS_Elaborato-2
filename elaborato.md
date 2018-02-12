@@ -535,4 +535,61 @@ ___
 | -------- | ---------------------------------------- |
 |          | A1.4.1 Il sistema comunica che l'utente esiste già |
 
+### UC.7 - Creazione di un nuovo gruppo 
+
+| Nome del caso d'uso  | Creazione di un nuovo gruppo             |
+| -------------------- | ---------------------------------------- |
+| **Descrizione**      | Descrive il processo che uno studente deve eseguire per poter creare un nuovo gruppo di lavoro |
+| **Precondizione**    | Lo studente ha già eseguito l'accesso    |
+| **Postcondizione**   | Lo studente ha creato un gruppo          |
+| **Scenari astratti** | SC.7.1 - SC.7.2 - SC.7.3 - SC.7.4 - SC.7.5 - SC.7.6 |
+
+#### Scenario principale
+
+| Studente                                 | Sistema                                  |
+| ---------------------------------------- | ---------------------------------------- |
+| 1.1  Lo studente chiede al sistema di poter creare un nuovo gruppo |                                          |
+|                                          | 2.1 Il sistema chiede di inserire il nome del gruppo e il numero dei membri |
+| 3.1  Lo studente inserisce i dati e indica tre come numero dei membri del gruppo |                                          |
+|                                          | 4.1 Il sistema verifica la disponibilità del nome<br />4.2 Il sistema chiede i nomi degli studenti da invitare |
+| 5.1 Lo studente inserisce i nomi degli altri membri |                                          |
+|                                          | 6.1 Il sistema verifica che tutti i membri siano inscritti alla piattaforma e non facciano parte di altri gruppi<br />6.2 Il sistema chiede se si desidera confermare l'operazione |
+| 7.1 Lo studente conferma                 |                                          |
+|                                          | 8.1 Il sistema invia una comunicazione a tutti gli studenti invitati<br />8.2 Il sistema conferma il buon esito dell'operazione |
+
+#### Scenario alternativo A1 - numero di membri diversi da tre
+
+| Studente                                 | Sistema                                  |
+| ---------------------------------------- | ---------------------------------------- |
+| A1.3.1  Lo studente inserisce i dati e indica un numero diverso da tre come numero dei membri del gruppo |                                          |
+|                                          | Ritorno allo scenario principale al punto 4.1 |
+|                                          | A1.8.1 Il sistema invia una comunicazione a tutti gli studenti invitati<br />A1.8.2 Il sistema invia una comunicazione a tutti gli studenti e ai tutor<br />A1.8.3 Il sistema conferma il buon esito dell'operazione |
+
+#### Scenario alternativo A2 - uno o più studenti invitati non sono iscritti alla piattaforma
+
+| Studente | Sistema                                  |
+| -------- | ---------------------------------------- |
+|          | A2.6.1 Il sistema verifica che tutti i membri siano inscritti alla piattaforma e non facciano parte di altri gruppi<br />A2.6.2 Il sistema comunica che uno o più studenti non sono iscritti alla piattaforma |
+|          | Ritorno allo scenario principale al punto 4.2 |
+
+#### Scenario alternativo A3 - nome non disponibile
+
+| Studente | Sistema                                  |
+| -------- | ---------------------------------------- |
+|          | A3.4.2 Il sistema comunica che il nome inserito già è in uso |
+|          | Ritorno allo scenario principale al punto 2.1 |
+
+#### Scenario alternativo A4 - uno o più studenti invitati fanno già parte di un altro gruppo
+
+| Studente | Sistema                                  |
+| -------- | ---------------------------------------- |
+|          | A4.6.1 Il sistema verifica che tutti i membri siano inscritti alla piattaforma e non facciano parte di altri gruppi<br />A4.6.2 Il sistema comunica che uno o più studenti fanno già parte di un gruppo |
+|          | Ritorno allo scenario principale al punto 4.2 |
+
+#### Scenario alternativo A5 - lo studente fa già parte di un gruppo
+
+| Studente | Sistema                                  |
+| -------- | ---------------------------------------- |
+|          | A5.2.1 Il sistema informa lo studente che già fa parte di un gruppo e che non può essere membro di due gruppi |
+
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
