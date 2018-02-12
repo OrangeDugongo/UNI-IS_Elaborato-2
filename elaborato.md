@@ -231,6 +231,12 @@ ___
 | **Descrizione colloquio dello scenario** | - Il docente o il tutor chiede al sistema di mostrare le richieste di revisioni pendenti.<br />- Il sistema mostra le richieste pendenti.<br />- Il docente o il tutor seleziona la richiesta che gli interessa.<br />- Il sistema mostra il nome del gruppo e le credenziali dei membri ed entra nella modalità di modifica dell'elaborato.<br />- Il docente o il tutor modifica il testo ed aggiunge eventuali commenti.<br />- Il sistema salva le modifiche e comunica agli studenti interessati che il docente o il tutor ha revisionato il loro elaborato. |
 ___
 
+| Scenario                                 | SC.5.2                                   |
+| ---------------------------------------- | ---------------------------------------- |
+| **Scopo**                                | Commentare il lavoro di un gruppo - La lista delle richieste è vuota |
+| **Utenti coinvolti**                     | Docente 1 o Tutor 1                      |
+| **Assunzioni**                           | Il docente 1 o il tutor 1 ha già effettuato il login |
+| **Descrizione colloquio dello scenario** | - Il docente o il tutor chiede al sistema di mostrare le richieste di revisioni pendenti.<br />- Il sistema comunica che non ci sono richieste pendenti. |
 ### Scenari MF.6 - Registrazione di un account studente
 
 | Scenario                                 | SC.6.1                                   |
@@ -366,7 +372,6 @@ ___
 | ---------------------------------------- | ---------------------------------------- |
 | 1.1 Il docente chiede di accedere al sistema |                                          |
 |                                          | 2.1 Il sistema chiede le credenziali di accesso |
-|                                          |                                          |
 | 3.1 Il docente comunica il suo user name e la password |                                          |
 |                                          | 4.1 Il sistema autentica il docente      |
 | 5.1 Il docente chiede al sistema di aggiungere un nuovo account tutor |                                          |
@@ -479,6 +484,31 @@ ___
 | Docente o tutor | Sistema                                  |
 | --------------- | ---------------------------------------- |
 |                 | A2.2.1 Il sistema comunica che la lista delle approvazioni è vuota |
-|                 |                                          |
+
+### UC.5 - Commentare il lavoro di un gruppo 
+
+| Nome del caso d'uso  | Commentare il lavoro di un gruppo        |
+| -------------------- | ---------------------------------------- |
+| **Descrizione**      | Descrive il processo che un docente o un tutor deve eseguire per poter commentare il lavoro di un gruppo |
+| **Precondizione**    | Il docente o il tutor ha già eseguito l'autenticazione |
+| **Postcondizione**   | Il lavoro del gruppo è commentato        |
+| **Scenari astratti** | SC.5.1 - SC.5.2                          |
+
+#### Scenario principale
+
+| Docente o tutor                          | Sistema                                  |
+| ---------------------------------------- | ---------------------------------------- |
+| 1.1 Il docente o il tutor chiede al sistema di mostrare le richieste di revisioni pendenti. |                                          |
+|                                          | 2.1  Il sistema mostra le richieste pendenti. |
+| 3.1  Il docente o il tutor seleziona la richiesta che gli interessa. |                                          |
+|                                          | 4.1 Il sistema mostra il nome del gruppo e le credenziali dei membri ed entra nella modalità di modifica dell'elaborato. |
+| 5.1 ll docente o il tutor modifica il testo ed aggiunge eventuali commenti. |                                          |
+|                                          | 6.1 Il sistema salva le modifiche <br />6.2 Il sistema comunica agli studenti interessati che il docente o il tutor ha revisionato il loro elaborato. |
+
+#### Scenario alternativo A1 - La lista è vuota
+
+| Docente o tutor | Sistema                                  |
+| --------------- | ---------------------------------------- |
+|                 | A2.2.1 Il sistema comunica che la lista delle richieste è vuota |
 
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
