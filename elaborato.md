@@ -511,7 +511,7 @@ ___
 | --------------- | ---------------------------------------- |
 |                 | A2.2.1 Il sistema comunica che la lista delle richieste è vuota |
 
-### UC.6 - Ragistrazione di uno studente 
+### UC.6 - Registrazione di uno studente 
 
 | Nome del caso d'uso  | Registrazione di uno studente            |
 | -------------------- | ---------------------------------------- |
@@ -591,5 +591,33 @@ ___
 | Studente | Sistema                                  |
 | -------- | ---------------------------------------- |
 |          | A5.2.1 Il sistema informa lo studente che già fa parte di un gruppo e che non può essere membro di due gruppi |
+
+### UC.8 - Conferma partecipazione a un gruppo 
+
+| Nome del caso d'uso  | Conferma partecipazione a un gruppo      |
+| -------------------- | ---------------------------------------- |
+| **Descrizione**      | Descrive il processo che uno studente deve eseguire per poter partecipare a un gruppo |
+| **Precondizione**    | Lo studente è già iscritto alla piattaforma |
+| **Postcondizione**   | Lo studente prenderà parte al gruppo     |
+| **Scenari astratti** | SC.8.1 - SC.8.2                          |
+
+#### Scenario principale
+
+| Studente                                 | Sistema                                  |
+| ---------------------------------------- | ---------------------------------------- |
+| 1.1  Lo studente chiede di visualizzare la lista degli inviti a prendere parte a un gruppo. |                                          |
+|                                          | 2.1 Il sistema  mostra tutti gli inviti  |
+| 3.1  Lo studente seleziona l'invito che gli interessa. |                                          |
+|                                          | 4.1  Il sistema mostra il nome del gruppo selezionato.<br />4.2 Il sistema mostra le credenziali dei suoi membri. |
+| 5.1 Lo studente accetta l'invito         |                                          |
+|                                          | 6.1 Il sistema comunica il buon esito dell'operazione. |
+
+#### Scenario alternativo A1 - Lo studente rifiuta l'invito 
+
+| Studente                                 | Sistema                                  |
+| ---------------------------------------- | ---------------------------------------- |
+| A1.5.1 Lo studente rifiuta l'invito di partecipazione al gruppo. |                                          |
+|                                          | Ritorno allo scenario principale al punto 6.1. |
+
 
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
