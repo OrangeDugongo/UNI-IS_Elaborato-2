@@ -237,11 +237,11 @@ ___
 | **Utenti coinvolti**                     | Docente 1 o Tutor 1                      |
 | **Assunzioni**                           | Il docente 1 o il tutor 1 ha già effettuato il login |
 | **Descrizione colloquio dello scenario** | - Il docente o il tutor chiede al sistema di mostrare le richieste di revisioni pendenti.<br />- Il sistema comunica che non ci sono richieste pendenti. |
-### Scenari MF.6 - Registrazione di un account studente
+### Scenari MF.6 - Registrazione di uno studente
 
 | Scenario                                 | SC.6.1                                   |
 | ---------------------------------------- | ---------------------------------------- |
-| **Scopo**                                | Registrazione di un account studente     |
+| **Scopo**                                | Registrazione di uno studente            |
 | **Utenti coinvolti**                     | Studente 1                               |
 | **Assunzioni**                           |                                          |
 | **Descrizione colloquio dello scenario** | - Lo studente chiede di potersi registrare.<br />- Il sistema chiede le informazioni necessarie alla autenticazione.<br />- Lo studente inserisce i proprio dati.<br />- Il sistema invia una richiesta di approvazione a tutti i docenti o tutor e comunica il buon esito dell'operazione. |
@@ -249,7 +249,7 @@ ___
 
 | Scenario                                 | SC.6.2                                   |
 | ---------------------------------------- | ---------------------------------------- |
-| **Scopo**                                | Registrazione di un account studente - lo studente già esiste nel sistema |
+| **Scopo**                                | Registrazione di uno studente - lo studente già esiste nel sistema |
 | **Utenti coinvolti**                     | Studente 2                               |
 | **Assunzioni**                           |                                          |
 | **Descrizione colloquio dello scenario** | - Lo studente chiede di potersi registrare.<br />- Il sistema chiede le informazioni necessarie alla autenticazione.<br />- Lo studente inserisce i proprio dati.<br />- Il sistema comunica che quella email è già associata ad un accont. |
@@ -510,5 +510,29 @@ ___
 | Docente o tutor | Sistema                                  |
 | --------------- | ---------------------------------------- |
 |                 | A2.2.1 Il sistema comunica che la lista delle richieste è vuota |
+
+### UC.6 - Ragistrazione di uno studente 
+
+| Nome del caso d'uso  | Registrazione di uno studente            |
+| -------------------- | ---------------------------------------- |
+| **Descrizione**      | Descrive il processo che uno studente deve eseguire per potersi registrare alla piattaforma |
+| **Precondizione**    |                                          |
+| **Postcondizione**   | Lo studente è registrato alla piattaforma |
+| **Scenari astratti** | SC.6.1 - SC.6.2                          |
+
+#### Scenario principale
+
+| Studente                                 | Sistema                                  |
+| ---------------------------------------- | ---------------------------------------- |
+| 1.1  Lo studente chiede di potersi registrare. |                                          |
+|                                          | 2.1 Il sistema  chiede le informazioni necessarie alla autenticazione. |
+| 3.1  Lo studente inserisce i proprio dati. |                                          |
+|                                          | 4.1  Il sistema invia una richiesta di approvazione a tutti i docenti o tutor<br />4.2 Il sistema comunica il buon esito dell'operazione. |
+
+#### Scenario alternativo A1 - Lo studente esiste già
+
+| Studente | Sistema                                  |
+| -------- | ---------------------------------------- |
+|          | A1.4.1 Il sistema comunica che l'utente esiste già |
 
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
