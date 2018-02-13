@@ -327,7 +327,14 @@ ___
 | **Utenti coinvolti**                     | Studente 1                               |
 | **Assunzioni**                           | Lo studente 1 ha già effettuato il login |
 | **Descrizione colloquio dello scenario** | - Lo studente chiede al sistema di creare un nuovo elaborato.<br />- Il sistema mostra la lista delle tracce disponibili.<br />- Lo studente sceglie la traccia a cui è interessato.<br />- Il sistema conferma il buon esito dell'operazione. |
+___
 
+| Scenario                                 | SC.9.2                                   |
+| ---------------------------------------- | ---------------------------------------- |
+| **Scopo**                                | Creazione di un nuovo elaborato - Lo studente non è membro di un gruppo |
+| **Utenti coinvolti**                     | Studente 2                               |
+| **Assunzioni**                           | Lo studente 1 ha già effettuato il login |
+| **Descrizione colloquio dello scenario** | - Lo studente chiede al sistema di creare un nuovo elaborato.<br />- Il sistema informa lo studente che per poter creare un elaborato è necessario far parte di un gruppo |
 ___
 ### Scenari MF.10 - Modifica di un elaborato
 
@@ -619,5 +626,28 @@ ___
 | A1.5.1 Lo studente rifiuta l'invito di partecipazione al gruppo. |                                          |
 |                                          | Ritorno allo scenario principale al punto 6.1. |
 
+### UC.9 - Creazione di un nuovo elaborato 
+
+| Nome del caso d'uso  | Conferma partecipazione a un gruppo      |
+| -------------------- | ---------------------------------------- |
+| **Descrizione**      | Descrive il processo che uno studente deve eseguire per poter partecipare a un gruppo |
+| **Precondizione**    | Lo studente è già iscritto alla piattaforma |
+| **Postcondizione**   | Lo studente prenderà parte al gruppo     |
+| **Scenari astratti** | SC.9.1 - SC.9.1                          |
+
+#### Scenario principale
+
+| Studente                                 | Sistema                                  |
+| ---------------------------------------- | ---------------------------------------- |
+| 1.1  Lo studente chiede al sistema di creare un nuovo elaborato |                                          |
+|                                          | 2.1 Il sistema mostra le tracce disponibili |
+| 3.1  Lo Studente sceglie la traccia a cui è interessato |                                          |
+|                                          | 4.1 Il sistema conferma il buon esito dell'operazione |
+
+#### Scenario alternativo A1 - Lo studente non è membro di un gruppo 
+
+| Studente | Sistema                                  |
+| -------- | ---------------------------------------- |
+|          | A1.2.1 Il sistema informa lo studente che per poter creare un elaborato bisogna far parte ad un gruppo |
 
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
