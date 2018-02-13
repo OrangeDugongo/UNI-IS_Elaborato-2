@@ -650,4 +650,38 @@ ___
 | -------- | ---------------------------------------- |
 |          | A1.2.1 Il sistema informa lo studente che per poter creare un elaborato bisogna far parte ad un gruppo |
 
+### UC.10 - Modifica di un elaborato 
+
+| Nome del caso d'uso  | Modifica di un elebaorato - upload diretto |
+| -------------------- | ---------------------------------------- |
+| **Descrizione**      | Descrive il processo che uno studente deve eseguire per poter modificare un elaborato |
+| **Precondizione**    | Lo studente ha già eseguito l'accesso    |
+| **Postcondizione**   | Lo studente ha modificato l'elaborato    |
+| **Scenari astratti** | SC.10.1 - SC.10.2 - SC.10.3              |
+
+#### Scenario principale
+
+| Studente                                 | Sistema                                  |
+| ---------------------------------------- | ---------------------------------------- |
+| 1.1  Lo studente chiede al sistema di mostrare la lista degli elaborati del gruppo di cui fa parte. |                                          |
+|                                          | 2.1 Il sistema mostra la lista degli elaborati |
+| 3.1  Lo studente chiede al sistema di inserire un nuovo documento |                                          |
+|                                          | 4.1 Il sistema chiede la modalità di caricamento del documento |
+| 5.1 Lo studente sceglie l'upload diretto<br />5.2 Lo studente seleziona il file .pdf da caricare. |                                          |
+|                                          | 6.1 Il sistema conferma il buon esito dell'operazione. |
+
+
+#### Scenario alternativo A1 - inserimento link esterno
+
+| Studente                                 | Sistema                                  |
+| ---------------------------------------- | ---------------------------------------- |
+| A1.5.1  Lo studente sceglie di caricare un link ad un documento di Google Drive<br />A1.5.2 Lo studente inserisce il link |                                          |
+|                                          | Ritorno allo scenario principale al punto 6.1 |
+
+#### Scenario alternativo A2 - nessun elaborato prodotto
+
+| Studente | Sistema                                  |
+| -------- | ---------------------------------------- |
+|          | A2.2.1 Il sistema avvisa che il gruppo di cui fa parte ancora non ha prodotto alcun elaborato. |
+
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
