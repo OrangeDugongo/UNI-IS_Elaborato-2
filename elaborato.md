@@ -369,7 +369,7 @@ ___
 | Nome del caso d'uso  | Aggiunta di un nuovo account tutor       |
 | -------------------- | ---------------------------------------- |
 | **Descrizione**      | Descrive il processo che il docente deve compiere per poter aggiungere un tutor |
-| **Precondizione**    | Il docente è in possesso di un account abilitatalo |
+| **Precondizione**    | Il docente è in possesso di un account abilitato |
 | **Postcondizione**   | Viene creato l'account tutor             |
 | **Scenari astratti** | SC.1.1 - SC.1.2 - SC.1.3                 |
 
@@ -516,7 +516,7 @@ ___
 
 | Docente o tutor | Sistema                                  |
 | --------------- | ---------------------------------------- |
-|                 | A2.2.1 Il sistema comunica che la lista delle richieste è vuota |
+|                 | A1.2.1 Il sistema comunica che la lista delle richieste è vuota |
 
 ### UC.6 - Registrazione di uno studente 
 
