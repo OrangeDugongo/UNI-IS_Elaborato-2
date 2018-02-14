@@ -379,11 +379,11 @@ ___
 | ---------------------------------------- | ---------------------------------------- |
 | 1.1 Il docente chiede di accedere al sistema |                                          |
 |                                          | 2.1 Il sistema chiede le credenziali di accesso |
-| 3.1 Il docente comunica il suo user name e la password |                                          |
+| 3.1 Il docente comunica il suo username e la password |                                          |
 |                                          | 4.1 Il sistema autentica il docente      |
 | 5.1 Il docente chiede al sistema di aggiungere un nuovo account tutor |                                          |
 |                                          | 6.1 Il sistema chiede i dati del tutor   |
-| 7.1 Il docente comunica i dati del tutor<br />7.2 Il docente conferma l'operazione |                                          |
+| 7.1 Il docente comunica i dati del tutor e conferma l'operazione |                                          |
 |                                          | 8.1 Il sistema comunica il buon esito dell'operazione |
 
 #### Scenario alternativo A1 - Dati di accesso non corretti
@@ -424,7 +424,7 @@ ___
 | ---------------------------------------- | ---------------------------------------- |
 | A1.5.1 Il docente o il tutor comunica di rifiutare la richiesta |                                          |
 |                                          | A1.6.1 Il sistema chiede se si vuole inserire una nota con le motivazioni |
-| A1.7.1 Il docente o il tutor comunica al sistema di voler inserire la nota<br />A1.7.2 Il docente o il tutor comunica al sistema le motivazioni |                                          |
+| A1.7.1 Il docente o il tutor comunica al sistema di voler inserire la nota ed inserisce le motivazioni |                                          |
 |                                          | A1.8.1 - Il sistema comunica il buon esito dell'operazione |
 
 #### Scenario alternativo A2 - Non ci sono richieste pendenti
@@ -451,7 +451,7 @@ ___
 | 3.1 Il docente o il tutor chiede di modificare la sezione |                                          |
 |                                          | 4.1 Il sistema entra nella modalità modifica |
 | 5.1 Il docente o il tutor esegue le modifiche |                                          |
-|                                          | 6.1 Il sistema salva le modifiche<br />6.2 Il sistema comunica il buon esito dell'operazione |
+|                                          | 6.1 Il sistema comunica il buon esito dell'operazione |
 
 #### Scenario alternativo A1 - Impossibilità ad effettuare la modifica
 
@@ -475,7 +475,7 @@ ___
 | 1.1 Il docente o il tutor chiede la lista di approvazione dei gruppi |                                          |
 |                                          | 2.1 Il sistema mostra tutte le richieste pendenti |
 | 3.1 Il docente o il tutor comunica la richiesta a cui è interessato |                                          |
-|                                          | 4.1 Il sistema mosta il nome del gruppo e il numero di membri |
+|                                          | 4.1 Il sistema mostra il nome del gruppo e il numero di membri |
 | 5.1 Il docente o il tutor sceglie di approvare il gruppo |                                          |
 |                                          | 6.1 Il sistema comunica il buon esito dell'operazione<br />6.2 Il sistema comunica la decisione agli studenti interessati |
 
@@ -576,7 +576,7 @@ ___
 
 | Studente | Sistema                                  |
 | -------- | ---------------------------------------- |
-|          | A2.6.1 Il sistema verifica che tutti i membri siano inscritti alla piattaforma e non facciano parte di altri gruppi<br />A2.6.2 Il sistema comunica che uno o più studenti non sono iscritti alla piattaforma |
+|          | A2.6.1 Il sistema verifica che tutti i membri siano iscritti alla piattaforma e non facciano parte di altri gruppi<br />A2.6.2 Il sistema comunica che uno o più studenti non sono iscritti alla piattaforma |
 |          | Ritorno allo scenario principale al punto 4.2 |
 
 #### Scenario alternativo A3 - nome non disponibile
@@ -590,7 +590,7 @@ ___
 
 | Studente | Sistema                                  |
 | -------- | ---------------------------------------- |
-|          | A4.6.1 Il sistema verifica che tutti i membri siano inscritti alla piattaforma e non facciano parte di altri gruppi<br />A4.6.2 Il sistema comunica che uno o più studenti fanno già parte di un gruppo |
+|          | A4.6.1 Il sistema verifica che tutti i membri siano iscritti alla piattaforma e non facciano parte di altri gruppi<br />A4.6.2 Il sistema comunica che uno o più studenti fanno già parte di un gruppo |
 |          | Ritorno allo scenario principale al punto 4.2 |
 
 #### Scenario alternativo A5 - lo studente fa già parte di un gruppo
@@ -615,7 +615,7 @@ ___
 | 1.1  Lo studente chiede di visualizzare la lista degli inviti a prendere parte a un gruppo. |                                          |
 |                                          | 2.1 Il sistema  mostra tutti gli inviti  |
 | 3.1  Lo studente seleziona l'invito che gli interessa. |                                          |
-|                                          | 4.1  Il sistema mostra il nome del gruppo selezionato.<br />4.2 Il sistema mostra le credenziali dei suoi membri. |
+|                                          | 4.1  Il sistema mostra il nome del gruppo selezionato e le credenziali dei suoi membri. |
 | 5.1 Lo studente accetta l'invito         |                                          |
 |                                          | 6.1 Il sistema comunica il buon esito dell'operazione. |
 
@@ -641,14 +641,14 @@ ___
 | ---------------------------------------- | ---------------------------------------- |
 | 1.1  Lo studente chiede al sistema di creare un nuovo elaborato |                                          |
 |                                          | 2.1 Il sistema mostra le tracce disponibili |
-| 3.1  Lo Studente sceglie la traccia a cui è interessato |                                          |
+| 3.1  Lo studente sceglie la traccia a cui è interessato |                                          |
 |                                          | 4.1 Il sistema conferma il buon esito dell'operazione |
 
 #### Scenario alternativo A1 - Lo studente non è membro di un gruppo 
 
 | Studente | Sistema                                  |
 | -------- | ---------------------------------------- |
-|          | A1.2.1 Il sistema informa lo studente che per poter creare un elaborato bisogna far parte ad un gruppo |
+|          | A1.2.1 Il sistema informa lo studente che per poter creare un elaborato bisogna far parte di un gruppo |
 
 ### UC.10 - Modifica di un elaborato 
 
@@ -667,7 +667,7 @@ ___
 |                                          | 2.1 Il sistema mostra la lista degli elaborati |
 | 3.1  Lo studente chiede al sistema di inserire un nuovo documento |                                          |
 |                                          | 4.1 Il sistema chiede la modalità di caricamento del documento |
-| 5.1 Lo studente sceglie l'upload diretto<br />5.2 Lo studente seleziona il file .pdf da caricare. |                                          |
+| 5.1 Lo studente sceglie l'upload diretto e seleziona il file .pdf da caricare. |                                          |
 |                                          | 6.1 Il sistema conferma il buon esito dell'operazione. |
 
 
@@ -675,7 +675,7 @@ ___
 
 | Studente                                 | Sistema                                  |
 | ---------------------------------------- | ---------------------------------------- |
-| A1.5.1  Lo studente sceglie di caricare un link ad un documento di Google Drive<br />A1.5.2 Lo studente inserisce il link |                                          |
+| A1.5.1  Lo studente sceglie di caricare un link ad un documento di Google Drive ed inserisce il link |                                          |
 |                                          | Ritorno allo scenario principale al punto 6.1 |
 
 #### Scenario alternativo A2 - nessun elaborato prodotto
