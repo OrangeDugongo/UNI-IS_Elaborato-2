@@ -404,7 +404,7 @@ ___
 | -------------------- | ------------------------------------------------------------ |
 | **Descrizione**      | Descrive il processo che un docente o un tutor deve eseguire per poter approvare uno studente |
 | **Precondizione**    |                                                              |
-| **Postcondizione**   |                                                              |
+| **Postcondizione**   | Viene approvata la registrazione di uno studente             |
 | **Scenari astratti** | SC.2.1 - SC.2.2 - SC.2.3                                     |
 
 #### Scenario principale 
@@ -442,8 +442,8 @@ ___
 | Nome del caso d'uso  | Modifica di una sezione                  |
 | -------------------- | ---------------------------------------- |
 | **Descrizione**      | Descrive il processo che un docente o un tutor deve eseguire per poter apportare delle modifiche ad una sezione del sito |
-| **Precondizione**    |  |
-| **Postcondizione**   |                                          |
+| **Precondizione**    |                                          |
+| **Postcondizione**   | Viene modificata una sezione             |
 | **Scenari astratti** | SC.3.1 - SC.3.2                          |
 
 #### Scenario principale
@@ -472,8 +472,8 @@ ___
 | Nome del caso d'uso  | Approvazione di un gruppo                |
 | -------------------- | ---------------------------------------- |
 | **Descrizione**      | Descrive il processo che un docente o un tutor deve eseguire per poter approvare un gruppo |
-| **Precondizione**    |  |
-| **Postcondizione**   |                                          |
+| **Precondizione**    |                                          |
+| **Postcondizione**   | Viene approvata la creazione di un gruppo |
 | **Scenari astratti** | SC.4.1 - SC.4.2 - SC4.3                  |
 
 #### Scenario principale
@@ -509,7 +509,7 @@ ___
 | Nome del caso d'uso  | Commentare il lavoro di un gruppo        |
 | -------------------- | ---------------------------------------- |
 | **Descrizione**      | Descrive il processo che un docente o un tutor deve eseguire per poter commentare il lavoro di un gruppo |
-| **Precondizione**    |  |
+| **Precondizione**    |                                          |
 | **Postcondizione**   | Il lavoro del gruppo è commentato        |
 | **Scenari astratti** | SC.5.1 - SC.5.2                          |
 
@@ -563,7 +563,7 @@ ___
 | Nome del caso d'uso  | Creazione di un nuovo gruppo             |
 | -------------------- | ---------------------------------------- |
 | **Descrizione**      | Descrive il processo che uno studente deve eseguire per poter creare un nuovo gruppo di lavoro |
-| **Precondizione**    |    |
+| **Precondizione**    |                                          |
 | **Postcondizione**   | Lo studente ha creato un gruppo          |
 | **Scenari astratti** | SC.7.1 - SC.7.2 - SC.7.3 - SC.7.4 - SC.7.5 - SC.7.6 |
 
@@ -624,7 +624,7 @@ ___
 | Nome del caso d'uso  | Conferma partecipazione a un gruppo      |
 | -------------------- | ---------------------------------------- |
 | **Descrizione**      | Descrive il processo che uno studente deve eseguire per poter partecipare a un gruppo |
-| **Precondizione**    |  |
+| **Precondizione**    |                                          |
 | **Postcondizione**   | Lo studente prenderà parte al gruppo     |
 | **Scenari astratti** | SC.8.1 - SC.8.2                          |
 
@@ -652,11 +652,11 @@ ___
 
 ### UC.9 - Creazione di un nuovo elaborato 
 
-| Nome del caso d'uso  | Conferma partecipazione a un gruppo      |
+| Nome del caso d'uso  | Creazione di un nuovo elaborato          |
 | -------------------- | ---------------------------------------- |
-| **Descrizione**      | Descrive il processo che uno studente deve eseguire per poter partecipare a un gruppo |
-| **Precondizione**    |  |
-| **Postcondizione**   | Lo studente prenderà parte al gruppo     |
+| **Descrizione**      | Descrive il processo che uno studente deve eseguire per poter creare un nuovo elaborato |
+| **Precondizione**    |                                          |
+| **Postcondizione**   | Verrà creato un nuovo elaborato          |
 | **Scenari astratti** | SC.9.1 - SC.9.1                          |
 
 #### Scenario principale
@@ -683,7 +683,7 @@ ___
 | Nome del caso d'uso  | Modifica di un elebaorato - upload diretto |
 | -------------------- | ---------------------------------------- |
 | **Descrizione**      | Descrive il processo che uno studente deve eseguire per poter modificare un elaborato |
-| **Precondizione**    |     |
+| **Precondizione**    |                                          |
 | **Postcondizione**   | Lo studente ha modificato l'elaborato    |
 | **Scenari astratti** | SC.10.1 - SC.10.2 - SC.10.3              |
 
