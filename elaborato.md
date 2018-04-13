@@ -400,104 +400,116 @@ ___
 
 ### UC.2 - Approvazione di uno studente 
 
-| Nome del caso d'uso  | Approvazione di uno studente             |
-| -------------------- | ---------------------------------------- |
+| Nome del caso d'uso  | Approvazione di uno studente                                 |
+| -------------------- | ------------------------------------------------------------ |
 | **Descrizione**      | Descrive il processo che un docente o un tutor deve eseguire per poter approvare uno studente |
-| **Precondizione**    | Il docente o il tutor ha già eseguito l'autenticazione |
-| **Postcondizione**   |                                          |
-| **Scenari astratti** | SC.2.1 - SC.2.2 - SC.2.3                 |
+| **Precondizione**    |                                                              |
+| **Postcondizione**   |                                                              |
+| **Scenari astratti** | SC.2.1 - SC.2.2 - SC.2.3                                     |
 
 #### Scenario principale 
 
-| Docente o tutor                          | Sistema                                  |
-| ---------------------------------------- | ---------------------------------------- |
-| 1.1 Il docente o il tutor chiede la lista delle approvazioni pendenti |                                          |
-|                                          | 2.1 Il sistema comunica la lista delle approvazioni pendenti |
-| 3.1 Il docente o il tutor comunica l'approvazione a cui è interessato |                                          |
-|                                          | 4.1 Il sistema chiede se si vuole approvare o meno la richiesta |
-| 5.1 Il docente o il tutor comunica di approvare la richiesta |                                          |
-|                                          | 6.1 Il sistema comunica il buon esito dell'operazione |
+| Docente o tutor                                              | Sistema                                                      |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| 1.1 Il docente o il tutor chiede di accedere al sistema      |                                                              |
+|                                                              | 2.1 Il sistema chiede le credenziali di accesso              |
+| 3.1 Il docente o il tutor comunica il suo username e la password |                                                              |
+|                                                              | 4.1 Il sistema autentica il docente o il tutor               |
+| 5.1 Il docente o il tutor chiede la lista delle approvazioni pendenti |                                                              |
+|                                                              | 6.1 Il sistema comunica la lista delle approvazioni pendenti |
+| 7.1 Il docente o il tutor comunica l'approvazione a cui è interessato |                                                              |
+|                                                              | 8.1 Il sistema chiede se si vuole approvare o meno la richiesta |
+| 9.1 Il docente o il tutor comunica di approvare la richiesta |                                                              |
+|                                                              | 10.1 Il sistema comunica il buon esito dell'operazione       |
 
 #### Scenario alternativo A1 - La richiesta viene rifiutata
 
-| Docente o tutor                          | Sistema                                  |
-| ---------------------------------------- | ---------------------------------------- |
-| A1.5.1 Il docente o il tutor comunica di rifiutare la richiesta |                                          |
-|                                          | A1.6.1 Il sistema chiede se si vuole inserire una nota con le motivazioni |
-| A1.7.1 Il docente o il tutor comunica al sistema di voler inserire la nota ed inserisce le motivazioni |                                          |
-|                                          | A1.8.1 - Il sistema comunica il buon esito dell'operazione |
+| Docente o tutor                                              | Sistema                                                      |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| A1.9.1 Il docente o il tutor comunica di rifiutare la richiesta |                                                              |
+|                                                              | A1.10.1 Il sistema chiede se si vuole inserire una nota con le motivazioni |
+| A1.11.1 Il docente o il tutor comunica al sistema di voler inserire la nota ed inserisce le motivazioni |                                                              |
+|                                                              | A1.12.1 - Il sistema comunica il buon esito dell'operazione  |
 
 #### Scenario alternativo A2 - Non ci sono richieste pendenti
 
-| Docente o tutor | Sistema                                  |
-| --------------- | ---------------------------------------- |
-|                 | A2.2.1 Il sistema comunica che non ci sono richieste pendenti |
+| Docente o tutor | Sistema                                                      |
+| --------------- | ------------------------------------------------------------ |
+|                 | A2.6.1 Il sistema comunica che non ci sono richieste pendenti |
 
 ### UC.3 - Modifica di una sezione
 
 | Nome del caso d'uso  | Modifica di una sezione                  |
 | -------------------- | ---------------------------------------- |
 | **Descrizione**      | Descrive il processo che un docente o un tutor deve eseguire per poter apportare delle modifiche ad una sezione del sito |
-| **Precondizione**    | Il docente o il tutor ha già eseguito l'autenticazione |
+| **Precondizione**    |  |
 | **Postcondizione**   |                                          |
 | **Scenari astratti** | SC.3.1 - SC.3.2                          |
 
 #### Scenario principale
 
-| Docente o tutor                          | Sistema                                  |
-| ---------------------------------------- | ---------------------------------------- |
-| 1.1 Il docente o il tutor sceglie la sezione da modificare |                                          |
-|                                          | 2.1 Il sistema mostra la sezione scelta  |
-| 3.1 Il docente o il tutor chiede di modificare la sezione |                                          |
-|                                          | 4.1 Il sistema entra nella modalità modifica |
-| 5.1 Il docente o il tutor esegue le modifiche |                                          |
-|                                          | 6.1 Il sistema comunica il buon esito dell'operazione |
+| Docente o tutor                                              | Sistema                                                |
+| ------------------------------------------------------------ | ------------------------------------------------------ |
+| 1.1 Il docente o il tutor chiede di accedere al sistema      |                                                        |
+|                                                              | 2.1 Il sistema chiede le credenziali di accesso        |
+| 3.1 Il docente o il tutor comunica il suo username e la password |                                                        |
+|                                                              | 4.1 Il sistema autentica il docente o il tutor         |
+| 5.1 Il docente o il tutor sceglie la sezione da modificare   |                                                        |
+|                                                              | 6.1 Il sistema mostra la sezione scelta                |
+| 7.1 Il docente o il tutor chiede di modificare la sezione    |                                                        |
+|                                                              | 8.1 Il sistema entra nella modalità modifica           |
+| 9.1 Il docente o il tutor esegue le modifiche                |                                                        |
+|                                                              | 10.1 Il sistema comunica il buon esito dell'operazione |
 
 #### Scenario alternativo A1 - Impossibilità ad effettuare la modifica
 
-| Docente o tutor | Sistema                                  |
-| --------------- | ---------------------------------------- |
-|                 | A1.4.1 Il sistema comunica l'impossibilità di entrane nella modalità modifica<br />A1.4.2 Il sistema mostra eventuali motivazioni |
+| Docente o tutor | Sistema                                                      |
+| --------------- | ------------------------------------------------------------ |
+|                 | A1.8.1 Il sistema comunica l'impossibilità di entrane nella modalità modifica<br />A1.8.2 Il sistema mostra eventuali motivazioni |
 
 ### UC.4 - Approvazione di un gruppo 
 
 | Nome del caso d'uso  | Approvazione di un gruppo                |
 | -------------------- | ---------------------------------------- |
 | **Descrizione**      | Descrive il processo che un docente o un tutor deve eseguire per poter approvare un gruppo |
-| **Precondizione**    | Il docente o il tutor ha già eseguito l'autenticazione |
+| **Precondizione**    |  |
 | **Postcondizione**   |                                          |
 | **Scenari astratti** | SC.4.1 - SC.4.2 - SC4.3                  |
 
 #### Scenario principale
 
-| Docente o tutor                          | Sistema                                  |
-| ---------------------------------------- | ---------------------------------------- |
-| 1.1 Il docente o il tutor chiede la lista di approvazione dei gruppi |                                          |
-|                                          | 2.1 Il sistema mostra tutte le richieste pendenti |
-| 3.1 Il docente o il tutor comunica la richiesta a cui è interessato |                                          |
-|                                          | 4.1 Il sistema mostra il nome del gruppo e il numero di membri |
-| 5.1 Il docente o il tutor sceglie di approvare il gruppo |                                          |
-|                                          | 6.1 Il sistema comunica il buon esito dell'operazione<br />6.2 Il sistema comunica la decisione agli studenti interessati |
+| Docente o tutor                                              | Sistema                                                      |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| 1.1 Il docente o il tutor chiede di accedere al sistema      |                                                              |
+|                                                              | 2.1 Il sistema chiede le credenziali di accesso              |
+| 3.1 Il docente o il tutor comunica il suo username e la password |                                                              |
+|                                                              | 4.1 Il sistema autentica il docente o il tutor               |
+| 5.1 Il docente o il tutor chiede la lista di approvazione dei gruppi |                                                              |
+|                                                              | 6.1 Il sistema mostra tutte le richieste pendenti            |
+| 7.1 Il docente o il tutor comunica la richiesta a cui è interessato |                                                              |
+|                                                              | 8.1 Il sistema mostra il nome del gruppo e il numero di membri |
+| 9.1 Il docente o il tutor sceglie di approvare il gruppo     |                                                              |
+|                                                              | 10.1 Il sistema comunica il buon esito dell'operazione<br />10.2 Il sistema comunica la decisione agli studenti interessati |
 
 #### Scenario alternativo A1 - Il gruppo non viene approvato
 
 | Docente o tutor                          | Sistema                                  |
 | ---------------------------------------- | ---------------------------------------- |
-| A1.5.1 Il docente o il tutor sceglie di non approvare il gruppo<br />A1.5.2 Il docente o il tutor inserisce le eventuali motivazioni |                                          |
-|                                          | Ritorno allo scenario principale al punto 6.1 |
+| A1.9.1 Il docente o il tutor sceglie di non approvare il gruppo<br />A1.9.2 Il docente o il tutor inserisce le eventuali motivazioni |                                          |
+|                                          | Ritorno allo scenario principale al punto 10.1 |
 
 #### Scenario alternativo A2 - La lista delle approvazioni è vuota
 
 | Docente o tutor | Sistema                                  |
 | --------------- | ---------------------------------------- |
-|                 | A2.2.1 Il sistema comunica che la lista delle approvazioni è vuota |
+|                 | A2.6.1 Il sistema comunica che la lista delle approvazioni è vuota |
 
 ### UC.5 - Commentare il lavoro di un gruppo 
 
 | Nome del caso d'uso  | Commentare il lavoro di un gruppo        |
 | -------------------- | ---------------------------------------- |
 | **Descrizione**      | Descrive il processo che un docente o un tutor deve eseguire per poter commentare il lavoro di un gruppo |
-| **Precondizione**    | Il docente o il tutor ha già eseguito l'autenticazione |
+| **Precondizione**    |  |
 | **Postcondizione**   | Il lavoro del gruppo è commentato        |
 | **Scenari astratti** | SC.5.1 - SC.5.2                          |
 
@@ -505,18 +517,22 @@ ___
 
 | Docente o tutor                          | Sistema                                  |
 | ---------------------------------------- | ---------------------------------------- |
-| 1.1 Il docente o il tutor chiede al sistema di mostrare le richieste di revisioni pendenti. |                                          |
-|                                          | 2.1  Il sistema mostra le richieste pendenti. |
-| 3.1  Il docente o il tutor seleziona la richiesta che gli interessa. |                                          |
-|                                          | 4.1 Il sistema mostra il nome del gruppo e le credenziali dei membri ed entra nella modalità di modifica dell'elaborato. |
-| 5.1 ll docente o il tutor modifica il testo ed aggiunge eventuali commenti. |                                          |
-|                                          | 6.1 Il sistema salva le modifiche <br />6.2 Il sistema comunica agli studenti interessati che il docente o il tutor ha revisionato il loro elaborato. |
+| 1.1 Il docente o il tutor chiede di accedere al sistema      |                                                              |
+|                                                              | 2.1 Il sistema chiede le credenziali di accesso              |
+| 3.1 Il docente o il tutor comunica il suo username e la password |                                                              |
+|                                                              | 4.1 Il sistema autentica il docente o il tutor               |
+| 5.1 Il docente o il tutor chiede al sistema di mostrare le richieste di revisioni pendenti. |                                          |
+|                                          | 6.1  Il sistema mostra le richieste pendenti. |
+| 7.1  Il docente o il tutor seleziona la richiesta che gli interessa. |                                          |
+|                                          | 8.1 Il sistema mostra il nome del gruppo e le credenziali dei membri ed entra nella modalità di modifica dell'elaborato. |
+| 9.1 ll docente o il tutor modifica il testo ed aggiunge eventuali commenti. |                                          |
+|                                          | 10.1 Il sistema salva le modifiche <br />10.2 Il sistema comunica agli studenti interessati che il docente o il tutor ha revisionato il loro elaborato. |
 
 #### Scenario alternativo A1 - La lista è vuota
 
 | Docente o tutor | Sistema                                  |
 | --------------- | ---------------------------------------- |
-|                 | A1.2.1 Il sistema comunica che la lista delle richieste è vuota |
+|                 | A1.6.1 Il sistema comunica che la lista delle richieste è vuota |
 
 ### UC.6 - Registrazione di uno studente 
 
@@ -534,20 +550,20 @@ ___
 | 1.1  Lo studente chiede di potersi registrare. |                                          |
 |                                          | 2.1 Il sistema  chiede le informazioni necessarie alla autenticazione. |
 | 3.1  Lo studente inserisce i proprio dati. |                                          |
-|                                          | 4.1  Il sistema invia una richiesta di approvazione a tutti i docenti o tutor<br />4.2 Il sistema comunica il buon esito dell'operazione. |
+|                                          |  4.1 Il sistema verifica l'esistenza dell'account dello studente<br />4.2  Il sistema invia una richiesta di approvazione a tutti i docenti e tutor<br />4.3 Il sistema comunica il buon esito dell'operazione. |
 
 #### Scenario alternativo A1 - Lo studente esiste già
 
 | Studente | Sistema                                  |
 | -------- | ---------------------------------------- |
-|          | A1.4.1 Il sistema comunica che l'utente esiste già |
+|          | A1.4.2 Il sistema comunica che l'utente esiste già |
 
 ### UC.7 - Creazione di un nuovo gruppo 
 
 | Nome del caso d'uso  | Creazione di un nuovo gruppo             |
 | -------------------- | ---------------------------------------- |
 | **Descrizione**      | Descrive il processo che uno studente deve eseguire per poter creare un nuovo gruppo di lavoro |
-| **Precondizione**    | Lo studente ha già eseguito l'accesso    |
+| **Precondizione**    |    |
 | **Postcondizione**   | Lo studente ha creato un gruppo          |
 | **Scenari astratti** | SC.7.1 - SC.7.2 - SC.7.3 - SC.7.4 - SC.7.5 - SC.7.6 |
 
@@ -555,56 +571,60 @@ ___
 
 | Studente                                 | Sistema                                  |
 | ---------------------------------------- | ---------------------------------------- |
-| 1.1  Lo studente chiede al sistema di poter creare un nuovo gruppo |                                          |
-|                                          | 2.1 Il sistema chiede di inserire il nome del gruppo e il numero dei membri |
-| 3.1  Lo studente inserisce i dati e indica tre come numero dei membri del gruppo |                                          |
-|                                          | 4.1 Il sistema verifica la disponibilità del nome<br />4.2 Il sistema chiede i nomi degli studenti da invitare |
-| 5.1 Lo studente inserisce i nomi degli altri membri |                                          |
-|                                          | 6.1 Il sistema verifica che tutti i membri siano inscritti alla piattaforma e non facciano parte di altri gruppi<br />6.2 Il sistema chiede se si desidera confermare l'operazione |
-| 7.1 Lo studente conferma                 |                                          |
-|                                          | 8.1 Il sistema invia una comunicazione a tutti gli studenti invitati<br />8.2 Il sistema conferma il buon esito dell'operazione |
+| 1.1 Lo studente chiede di accedere al sistema      |                                                              |
+|                                                              | 2.1 Il sistema chiede le credenziali di accesso              |
+| 3.1 Lo studente comunica il suo username e la password |                                                              |
+|                                                              | 4.1 Il sistema autentica lo studente               |
+| 5.1  Lo studente chiede al sistema di poter creare un nuovo gruppo |                                          |
+|                                          | 6.1 Il sistema chiede di inserire il nome del gruppo e il numero dei membri |
+| 7.1  Lo studente inserisce i dati e indica tre come numero dei membri del gruppo |                                          |
+|                                          | 8.1 Il sistema verifica la disponibilità del nome<br />8.2 Il sistema chiede i nomi degli studenti da invitare |
+| 9.1 Lo studente inserisce i nomi degli altri membri |                                          |
+|                                          | 10.1 Il sistema verifica l'esistenza degli account degli studenti invitati<br/> 10.2 Il sistema verifica che gli studenti invitati non facciano parte di altri gruppi<br />10.3 Il sistema chiede se si desidera confermare l'operazione |
+| 11.1 Lo studente conferma                 |                                          |
+|                                          | 12.1 Il sistema invia una comunicazione a tutti gli studenti invitati<br />12.2 Il sistema conferma il buon esito dell'operazione |
 
 #### Scenario alternativo A1 - numero di membri diversi da tre
 
 | Studente                                 | Sistema                                  |
 | ---------------------------------------- | ---------------------------------------- |
-| A1.3.1  Lo studente inserisce i dati e indica un numero diverso da tre come numero dei membri del gruppo |                                          |
-|                                          | Ritorno allo scenario principale al punto 4.1 |
-|                                          | A1.8.1 Il sistema invia una comunicazione a tutti gli studenti invitati<br />A1.8.2 Il sistema invia una comunicazione a tutti gli studenti e ai tutor<br />A1.8.3 Il sistema conferma il buon esito dell'operazione |
+| A1.7.1  Lo studente inserisce i dati e indica un numero diverso da tre come numero dei membri del gruppo |                                          |
+|                                          | Ritorno allo scenario principale al punto 8.1 |
+|                                          | A1.12.1 Il sistema invia una comunicazione a tutti gli studenti invitati<br />A1.12.2 Il sistema invia una comunicazione a tutti i docenti e ai tutor<br />A1.12.3 Il sistema conferma il buon esito dell'operazione |
 
 #### Scenario alternativo A2 - uno o più studenti invitati non sono iscritti alla piattaforma
 
 | Studente | Sistema                                  |
 | -------- | ---------------------------------------- |
-|          | A2.6.1 Il sistema verifica che tutti i membri siano iscritti alla piattaforma e non facciano parte di altri gruppi<br />A2.6.2 Il sistema comunica che uno o più studenti non sono iscritti alla piattaforma |
-|          | Ritorno allo scenario principale al punto 4.2 |
+|          | A2.10.2 Il sistema comunica che uno o più studenti non sono iscritti alla piattaforma |
+|          | Ritorno allo scenario principale al punto 8.2 |
 
 #### Scenario alternativo A3 - nome non disponibile
 
 | Studente | Sistema                                  |
 | -------- | ---------------------------------------- |
-|          | A3.4.2 Il sistema comunica che il nome inserito già è in uso |
-|          | Ritorno allo scenario principale al punto 2.1 |
+|          | A3.8.2 Il sistema comunica che il nome inserito è già in uso |
+|          | Ritorno allo scenario principale al punto 6.1 |
 
 #### Scenario alternativo A4 - uno o più studenti invitati fanno già parte di un altro gruppo
 
 | Studente | Sistema                                  |
 | -------- | ---------------------------------------- |
-|          | A4.6.1 Il sistema verifica che tutti i membri siano iscritti alla piattaforma e non facciano parte di altri gruppi<br />A4.6.2 Il sistema comunica che uno o più studenti fanno già parte di un gruppo |
-|          | Ritorno allo scenario principale al punto 4.2 |
+|          | A4.10.3 Il sistema comunica che uno o più studenti fanno già parte di un gruppo |
+|          | Ritorno allo scenario principale al punto 8.2 |
 
 #### Scenario alternativo A5 - lo studente fa già parte di un gruppo
 
 | Studente | Sistema                                  |
 | -------- | ---------------------------------------- |
-|          | A5.2.1 Il sistema informa lo studente che già fa parte di un gruppo e che non può essere membro di due gruppi |
+|          | A5.6.1 Il sistema informa lo studente che già fa parte di un gruppo e che non può essere membro di due gruppi |
 
 ### UC.8 - Conferma partecipazione a un gruppo 
 
 | Nome del caso d'uso  | Conferma partecipazione a un gruppo      |
 | -------------------- | ---------------------------------------- |
 | **Descrizione**      | Descrive il processo che uno studente deve eseguire per poter partecipare a un gruppo |
-| **Precondizione**    | Lo studente è già iscritto alla piattaforma |
+| **Precondizione**    |  |
 | **Postcondizione**   | Lo studente prenderà parte al gruppo     |
 | **Scenari astratti** | SC.8.1 - SC.8.2                          |
 
@@ -612,26 +632,30 @@ ___
 
 | Studente                                 | Sistema                                  |
 | ---------------------------------------- | ---------------------------------------- |
-| 1.1  Lo studente chiede di visualizzare la lista degli inviti a prendere parte a un gruppo. |                                          |
-|                                          | 2.1 Il sistema  mostra tutti gli inviti  |
-| 3.1  Lo studente seleziona l'invito che gli interessa. |                                          |
-|                                          | 4.1  Il sistema mostra il nome del gruppo selezionato e le credenziali dei suoi membri. |
-| 5.1 Lo studente accetta l'invito         |                                          |
-|                                          | 6.1 Il sistema comunica il buon esito dell'operazione. |
+| 1.1 Lo studente chiede di accedere al sistema      |                                                              |
+|                                                              | 2.1 Il sistema chiede le credenziali di accesso              |
+| 3.1 Lo studente comunica il suo username e la password |                                                              |
+|                                                              | 4.1 Il sistema autentica lo studente               |
+| 5.1  Lo studente chiede di visualizzare la lista degli inviti a prendere parte a un gruppo. |                                          |
+|                                          | 6.1 Il sistema  mostra tutti gli inviti  |
+| 7.1  Lo studente seleziona l'invito che gli interessa. |                                          |
+|                                          | 8.1  Il sistema mostra il nome del gruppo selezionato e le credenziali dei suoi membri. |
+| 9.1 Lo studente accetta l'invito         |                                          |
+|                                          | 10.1 Il sistema comunica il buon esito dell'operazione. |
 
 #### Scenario alternativo A1 - Lo studente rifiuta l'invito 
 
 | Studente                                 | Sistema                                  |
 | ---------------------------------------- | ---------------------------------------- |
-| A1.5.1 Lo studente rifiuta l'invito di partecipazione al gruppo. |                                          |
-|                                          | Ritorno allo scenario principale al punto 6.1. |
+| A1.9.1 Lo studente rifiuta l'invito di partecipazione al gruppo. |                                          |
+|                                          | Ritorno allo scenario principale al punto 10.1. |
 
 ### UC.9 - Creazione di un nuovo elaborato 
 
 | Nome del caso d'uso  | Conferma partecipazione a un gruppo      |
 | -------------------- | ---------------------------------------- |
 | **Descrizione**      | Descrive il processo che uno studente deve eseguire per poter partecipare a un gruppo |
-| **Precondizione**    | Lo studente è già iscritto alla piattaforma |
+| **Precondizione**    |  |
 | **Postcondizione**   | Lo studente prenderà parte al gruppo     |
 | **Scenari astratti** | SC.9.1 - SC.9.1                          |
 
@@ -639,23 +663,27 @@ ___
 
 | Studente                                 | Sistema                                  |
 | ---------------------------------------- | ---------------------------------------- |
-| 1.1  Lo studente chiede al sistema di creare un nuovo elaborato |                                          |
-|                                          | 2.1 Il sistema mostra le tracce disponibili |
-| 3.1  Lo studente sceglie la traccia a cui è interessato |                                          |
-|                                          | 4.1 Il sistema conferma il buon esito dell'operazione |
+| 1.1 Lo studente chiede di accedere al sistema      |                                                              |
+|                                                              | 2.1 Il sistema chiede le credenziali di accesso              |
+| 3.1 Lo studente comunica il suo username e la password |                                                              |
+|                                                              | 4.1 Il sistema autentica lo studente               |
+| 5.1  Lo studente chiede al sistema di creare un nuovo elaborato |                                          |
+|                                          | 6.1 Il sistema mostra le tracce disponibili |
+| 7.1  Lo studente sceglie la traccia a cui è interessato |                                          |
+|                                          | 8.1 Il sistema conferma il buon esito dell'operazione |
 
 #### Scenario alternativo A1 - Lo studente non è membro di un gruppo 
 
 | Studente | Sistema                                  |
 | -------- | ---------------------------------------- |
-|          | A1.2.1 Il sistema informa lo studente che per poter creare un elaborato bisogna far parte di un gruppo |
+|          | A1.6.1 Il sistema informa lo studente che per poter creare un elaborato bisogna far parte di un gruppo |
 
 ### UC.10 - Modifica di un elaborato 
 
 | Nome del caso d'uso  | Modifica di un elebaorato - upload diretto |
 | -------------------- | ---------------------------------------- |
 | **Descrizione**      | Descrive il processo che uno studente deve eseguire per poter modificare un elaborato |
-| **Precondizione**    | Lo studente ha già eseguito l'accesso    |
+| **Precondizione**    |     |
 | **Postcondizione**   | Lo studente ha modificato l'elaborato    |
 | **Scenari astratti** | SC.10.1 - SC.10.2 - SC.10.3              |
 
@@ -663,25 +691,29 @@ ___
 
 | Studente                                 | Sistema                                  |
 | ---------------------------------------- | ---------------------------------------- |
-| 1.1  Lo studente chiede al sistema di mostrare la lista degli elaborati del gruppo di cui fa parte. |                                          |
-|                                          | 2.1 Il sistema mostra la lista degli elaborati |
-| 3.1  Lo studente chiede al sistema di inserire un nuovo documento |                                          |
-|                                          | 4.1 Il sistema chiede la modalità di caricamento del documento |
-| 5.1 Lo studente sceglie l'upload diretto e seleziona il file .pdf da caricare. |                                          |
-|                                          | 6.1 Il sistema conferma il buon esito dell'operazione. |
+| 1.1 Lo studente chiede di accedere al sistema      |                                                              |
+|                                                              | 2.1 Il sistema chiede le credenziali di accesso              |
+| 3.1 Lo studente comunica il suo username e la password |                                                              |
+|                                                              | 4.1 Il sistema autentica lo studente               |
+| 5.1  Lo studente chiede al sistema di mostrare la lista degli elaborati del gruppo di cui fa parte. |                                          |
+|                                          | 6.1 Il sistema mostra la lista degli elaborati |
+| 7.1  Lo studente chiede al sistema di inserire un nuovo documento |                                          |
+|                                          | 8.1 Il sistema chiede la modalità di caricamento del documento |
+| 9.1 Lo studente sceglie l'upload diretto e seleziona il file .pdf da caricare. |                                          |
+|                                          | 10.1 Il sistema conferma il buon esito dell'operazione. |
 
 
 #### Scenario alternativo A1 - inserimento link esterno
 
 | Studente                                 | Sistema                                  |
 | ---------------------------------------- | ---------------------------------------- |
-| A1.5.1  Lo studente sceglie di caricare un link ad un documento di Google Drive ed inserisce il link |                                          |
-|                                          | Ritorno allo scenario principale al punto 6.1 |
+| A1.9.1  Lo studente sceglie di caricare un link ad un documento di Google Drive ed inserisce il link |                                          |
+|                                          | Ritorno allo scenario principale al punto 10.1 |
 
 #### Scenario alternativo A2 - nessun elaborato prodotto
 
 | Studente | Sistema                                  |
 | -------- | ---------------------------------------- |
-|          | A2.2.1 Il sistema avvisa che il gruppo di cui fa parte ancora non ha prodotto alcun elaborato. |
+|          | A2.6.1 Il sistema avvisa che il gruppo di cui fa parte ancora non ha prodotto alcun elaborato. |
 
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
