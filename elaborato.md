@@ -1,4 +1,4 @@
-Testo Originale della Minuta di Meeting
+## Testo Originale della Minuta di Meeting
 
 Sono previsti servizi per studenti, docenti e tutor. Docenti e tutor definiscono la sezione dedicata alle informazioni generali del corso ( descrizione, programma, testi consigliati, info e altro ..); la sezione dedicata ai materiali didattici ( slides e dispense); la sezione dedicata alle esercitazioni, agli elaborati, alla costituzione elenco gruppi di lavoro e assegnazione tutor ed elaborati, altro...; la sezione dedicata a testi, standard, lectures suggeriti; la sezione dedicata a iniziative culturali e scientifiche. Gli studenti potranno visitare le diverse sezioni del sito, scaricare materiali didattici e nell'apposita area depositare gli elaborati di gruppo.
 
@@ -384,7 +384,7 @@ ___
 | 5.1 Il docente chiede al sistema di aggiungere un nuovo account tutor |                                                              |
 |                                                              | 6.1 Il sistema chiede i dati del tutor                       |
 | 7.1 Il docente comunica i dati del tutor e conferma l'operazione |                                                              |
-|                                                              | 8.1 Il sistema verifica l'esistenza dell'account del tutor <br />8.2 Il sistema comunica il buon esito dell'operazione |
+|                                                              | 8.1 Il sistema verifica l'esistenza dell'account utente<br />8.2 Il sistema comunica il buon esito dell'operazione |
 
 #### Scenario alternativo A1 - Dati di accesso non corretti
 
@@ -545,12 +545,12 @@ ___
 
 #### Scenario principale
 
-| Studente                                 | Sistema                                  |
-| ---------------------------------------- | ---------------------------------------- |
-| 1.1  Lo studente chiede di potersi registrare. |                                          |
-|                                          | 2.1 Il sistema  chiede le informazioni necessarie alla autenticazione. |
-| 3.1  Lo studente inserisce i proprio dati. |                                          |
-|                                          |  4.1 Il sistema verifica l'esistenza dell'account dello studente<br />4.2  Il sistema invia una richiesta di approvazione a tutti i docenti e tutor<br />4.3 Il sistema comunica il buon esito dell'operazione. |
+| Studente                                       | Sistema                                                      |
+| ---------------------------------------------- | ------------------------------------------------------------ |
+| 1.1  Lo studente chiede di potersi registrare. |                                                              |
+|                                                | 2.1 Il sistema  chiede le informazioni necessarie alla autenticazione. |
+| 3.1  Lo studente inserisce i proprio dati.     |                                                              |
+|                                                | 4.1 Il sistema verifica l'esistenza dell'account utente<br />4.2  Il sistema invia una richiesta di approvazione a tutti i docenti e tutor<br />4.3 Il sistema comunica il buon esito dell'operazione. |
 
 #### Scenario alternativo A1 - Lo studente esiste già
 
@@ -580,7 +580,7 @@ ___
 | 7.1  Lo studente inserisce il nome e indica tre come numero dei membri del gruppo |                                                              |
 |                                                              | 8.1 Il sistema verifica la disponibilità del nome<br />8.2 Il sistema chiede le matricole degli studenti da invitare |
 | 9.1 Lo studente inserisce le matricole degli altri membri    |                                                              |
-|                                                              | 10.1 Il sistema verifica l'esistenza degli account degli studenti invitati<br/> 10.2 Il sistema verifica che gli studenti invitati non facciano parte di altri gruppi<br />10.3 Il sistema chiede se si desidera confermare l'operazione |
+|                                                              | 10.1 Il sistema verifica l'esistenza dell'account utente per ogni studente inserito<br/> 10.2 Il sistema verifica che gli studenti invitati non facciano parte di altri gruppi<br />10.3 Il sistema chiede se si desidera confermare l'operazione |
 | 11.1 Lo studente conferma                                    |                                                              |
 |                                                              | 12.1 Il sistema invia una comunicazione a tutti gli studenti invitati<br />12.2 Il sistema conferma il buon esito dell'operazione |
 
@@ -720,50 +720,35 @@ ___
 
 ## Modello dei casi d'uso raffinati
 
+### UC.I1 - Login
+
 | Nome del caso d'uso | Login                                                        |
 | :------------------ | ------------------------------------------------------------ |
 | **Descrizione**     | Descrive il processo che un utente deve eseguire per autenticarsi alla piattaforma |
 | **Precondizione**   |                                                              |
 | **Postcondizione**  | L'utente è autenticato alla piattaforma                      |
 | **Use case**        | UC.1 - UC.2 - UC.3 - UC.4 - UC.5 - UC.7 - UC.8 - UC.9 - UC.10 |
-| **UC.1**            | 1.1 - 2.1 - 3.1 - 4.1                                        |
-| **UC.2**            | 1.1 - 2.1 - 3.1 - 4.1                                        |
-| **UC.3**            | 1.1 - 2.1 - 3.1 - 4.1                                        |
-| **UC.4**            | 1.1 - 2.1 - 3.1 - 4.1                                        |
-| **UC.5**            | 1.1 - 2.1 - 3.1 - 4.1                                        |
-| **UC.7**            | 1.1 - 2.1 - 3.1 - 4.1                                        |
-| **UC.8**            | 1.1 - 2.1 - 3.1 - 4.1                                        |
-| **UC.9**            | 1.1 - 2.1 - 3.1 - 4.1                                        |
-| **UC.10**           | 1.1 - 2.1 - 3.1 - 4.1                                        |
-
 | **Utente**                                          | **Sistema**                                     |
-| --------------------------------------------------- | ----------------------------------------------- |
 | 1.1 L'utente chiede di accedere al sistema          |                                                 |
 |                                                     | 2.1 Il sistema chiede la credenziali di accesso |
 | 3.1 L'utente comunica il suo username e la password |                                                 |
 |                                                     | 4.1 Il sistema autentica l'utente               |
 
 
+### UC.I2 - Verifica esistenza account
 
-| **Nome del caso d'uso** | Verifica esistenza dell'account                              |
-| ----------------------- | ------------------------------------------------------------ |
+| **Nome del caso d'uso** | Verifica esistenza account                                                           |
+| ----------------------- | ------------------------------------------------------------                              |
 | **Descrizione**         | È il processo che verifica l'esistenza dell'account nel sistema di un determinato utente. |
-| **Precondizione**       |                                                              |
-| **Postcondizione**      |                                                              |
-| **Use cases**           | UC.1 - UC.6 - UC.7                                           |
-| **UC.1**                | 6.1 - 7.1 - 8.1                                              |
-| **UC.6**                | 2.1 - 3.1 - 4.1                                              |
-| **UC.7**                | 8.2 - 9.1 - 10.1                                             |
+| **Precondizione**       |                                                                                           |
+| **Postcondizione**      |                                                                                           |
+| **Use cases**           | UC.1 - UC.6 - UC.7                                                                        |
+| **Utente**              | **Sistema**                                                                               |
+|                         | 3.1 Il sistema verifica l'esistenza dell'account utente                                   |
 
-| **Utente**                              | Sistema                                                      |
-| --------------------------------------- | ------------------------------------------------------------ |
-|                                         | 1.1 Il sistema chiede i dati dell'utente da verificare       |
-| 2.1 L'utente inserisci i dati richiesti |                                                              |
-|                                         | 3.1 Il sistema verifica l'esistenza dell'account dell'utente inserito |
+### Use cases raffinati 
 
-## Use cases
-
-### UC.1 - Aggiunta di un nuovo account tutor 
+#### UC.1 - Aggiunta di un nuovo account tutor 
 
 | Nome del caso d'uso  | Aggiunta di un nuovo account tutor       |
 | -------------------- | ---------------------------------------- |
@@ -772,28 +757,29 @@ ___
 | **Postcondizione**   | Viene creato l'account tutor             |
 | **Scenari astratti** | SC.1.1 - SC.1.2 - SC.1.3                 |
 
-#### Scenario principale 
+##### Scenario principale 
 
-| Docente                                                      | Sistema                                               |
-| ------------------------------------------------------------ | ----------------------------------------------------- |
-| **Login**                                                    |                                                       |
-| 5.1 Il docente chiede al sistema di aggiungere un nuovo account tutor |                                                       |
-|                                                              | **Verifica esistenza dell'account**                   |
-|                                                              | 8.2 Il sistema comunica il buon esito dell'operazione |
+| Docente                                                               | Sistema                                                                                                  |
+| ------------------------------------------------------------          | ------------------------------------------------------------                                             |
+| *include* **Login**                                                   |                                                                                                          |
+| 5.1 Il docente chiede al sistema di aggiungere un nuovo account tutor |                                                                                                          |
+|                                                                       | 6.1 Il sistema chiede i dati del tutor                                                                   |
+| 7.1 Il docente comunica i dati del tutor e conferma l'operazione      |                                                                                                          |
+|                                                                       | *include* **Verifica esistenza dell'account**<br />8.2 Il sistema comunica il buon esito dell'operazione |
 
-#### Scenario alternativo A1 - Dati di accesso non corretti
+##### Scenario alternativo A1 - Dati di accesso non corretti
 
 | Docente | Sistema                                  |
 | ------- | ---------------------------------------- |
 |         | A1.4.1 Il sistema avvisa il docente che i dati inserito non sono validi<br />Ritorno allo scenario principale al passo 2.1 |
 
-#### Scenario alternativo A2 - Il tutor già esiste
+##### Scenario alternativo A2 - Il tutor già esiste
 
 | Docente | Sistema                                                      |
 | ------- | ------------------------------------------------------------ |
 |         | A2.8.2 Il sistema avvisa il docente che i dati inseriti corrispondono ad un tutor già presente nel sistema.<br />Ritorno allo scenario principale al passo 6.1 |
 
-### UC.2 - Approvazione di uno studente 
+#### UC.2 - Approvazione di uno studente 
 
 | Nome del caso d'uso  | Approvazione di uno studente                                 |
 | -------------------- | ------------------------------------------------------------ |
@@ -802,11 +788,11 @@ ___
 | **Postcondizione**   | Viene approvata la registrazione di uno studente             |
 | **Scenari astratti** | SC.2.1 - SC.2.2 - SC.2.3                                     |
 
-#### Scenario principale 
+##### Scenario principale 
 
 | Docente o tutor                                              | Sistema                                                      |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| **Login**                                                    |                                                              |
+| *include* **Login**                                                   |                                                                                                          |
 | 5.1 Il docente o il tutor chiede la lista delle approvazioni pendenti |                                                              |
 |                                                              | 6.1 Il sistema comunica la lista delle approvazioni pendenti |
 | 7.1 Il docente o il tutor comunica l'approvazione a cui è interessato |                                                              |
@@ -814,7 +800,7 @@ ___
 | 9.1 Il docente o il tutor comunica di approvare la richiesta |                                                              |
 |                                                              | 10.1 Il sistema comunica il buon esito dell'operazione       |
 
-#### Scenario alternativo A1 - La richiesta viene rifiutata
+##### Scenario alternativo A1 - La richiesta viene rifiutata
 
 | Docente o tutor                                              | Sistema                                                      |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -823,13 +809,13 @@ ___
 | A1.11.1 Il docente o il tutor comunica al sistema di voler inserire la nota ed inserisce le motivazioni |                                                              |
 |                                                              | A1.12.1 - Il sistema comunica il buon esito dell'operazione  |
 
-#### Scenario alternativo A2 - Non ci sono richieste pendenti
+##### Scenario alternativo A2 - Non ci sono richieste pendenti
 
 | Docente o tutor | Sistema                                                      |
 | --------------- | ------------------------------------------------------------ |
 |                 | A2.6.1 Il sistema comunica che non ci sono richieste pendenti |
 
-### UC.3 - Modifica di una sezione
+#### UC.3 - Modifica di una sezione
 
 | Nome del caso d'uso  | Modifica di una sezione                  |
 | -------------------- | ---------------------------------------- |
@@ -838,11 +824,11 @@ ___
 | **Postcondizione**   | Viene modificata una sezione             |
 | **Scenari astratti** | SC.3.1 - SC.3.2                          |
 
-#### Scenario principale
+##### Scenario principale
 
 | Docente o tutor                                            | Sistema                                                |
 | ---------------------------------------------------------- | ------------------------------------------------------ |
-| **Login**                                                  |                                                        |
+| *include* **Login**                                                   |                                                                                                          |
 | 5.1 Il docente o il tutor sceglie la sezione da modificare |                                                        |
 |                                                            | 6.1 Il sistema mostra la sezione scelta                |
 | 7.1 Il docente o il tutor chiede di modificare la sezione  |                                                        |
@@ -850,13 +836,13 @@ ___
 | 9.1 Il docente o il tutor esegue le modifiche              |                                                        |
 |                                                            | 10.1 Il sistema comunica il buon esito dell'operazione |
 
-#### Scenario alternativo A1 - Impossibilità ad effettuare la modifica
+##### Scenario alternativo A1 - Impossibilità ad effettuare la modifica
 
 | Docente o tutor | Sistema                                                      |
 | --------------- | ------------------------------------------------------------ |
 |                 | A1.8.1 Il sistema comunica l'impossibilità di entrane nella modalità modifica<br />A1.8.2 Il sistema mostra eventuali motivazioni |
 
-### UC.4 - Approvazione di un gruppo 
+#### UC.4 - Approvazione di un gruppo 
 
 | Nome del caso d'uso  | Approvazione di un gruppo                |
 | -------------------- | ---------------------------------------- |
@@ -865,11 +851,11 @@ ___
 | **Postcondizione**   | Viene approvata la creazione di un gruppo |
 | **Scenari astratti** | SC.4.1 - SC.4.2 - SC4.3                  |
 
-#### Scenario principale
+##### Scenario principale
 
 | Docente o tutor                                              | Sistema                                                      |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| **Login**                                                    |                                                              |
+| *include* **Login**                                                   |                                                                                                          |
 | 5.1 Il docente o il tutor chiede la lista di approvazione dei gruppi |                                                              |
 |                                                              | 6.1 Il sistema mostra tutte le richieste pendenti            |
 | 7.1 Il docente o il tutor comunica la richiesta a cui è interessato |                                                              |
@@ -877,20 +863,20 @@ ___
 | 9.1 Il docente o il tutor sceglie di approvare il gruppo     |                                                              |
 |                                                              | 10.1 Il sistema comunica il buon esito dell'operazione<br />10.2 Il sistema comunica la decisione agli studenti interessati |
 
-#### Scenario alternativo A1 - Il gruppo non viene approvato
+##### Scenario alternativo A1 - Il gruppo non viene approvato
 
 | Docente o tutor                          | Sistema                                  |
 | ---------------------------------------- | ---------------------------------------- |
 | A1.9.1 Il docente o il tutor sceglie di non approvare il gruppo<br />A1.9.2 Il docente o il tutor inserisce le eventuali motivazioni |                                          |
 |                                          | Ritorno allo scenario principale al punto 10.1 |
 
-#### Scenario alternativo A2 - La lista delle approvazioni è vuota
+##### Scenario alternativo A2 - La lista delle approvazioni è vuota
 
 | Docente o tutor | Sistema                                  |
 | --------------- | ---------------------------------------- |
 |                 | A2.6.1 Il sistema comunica che la lista delle approvazioni è vuota |
 
-### UC.5 - Commentare il lavoro di un gruppo 
+#### UC.5 - Commentare il lavoro di un gruppo 
 
 | Nome del caso d'uso  | Commentare il lavoro di un gruppo        |
 | -------------------- | ---------------------------------------- |
@@ -899,11 +885,11 @@ ___
 | **Postcondizione**   | Il lavoro del gruppo è commentato        |
 | **Scenari astratti** | SC.5.1 - SC.5.2                          |
 
-#### Scenario principale
+##### Scenario principale
 
 | Docente o tutor                                              | Sistema                                                      |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| **Login**                                                    |                                                              |
+| *include* **Login**                                                   |                                                                                                          |
 | 5.1 Il docente o il tutor chiede al sistema di mostrare le richieste di revisioni pendenti. |                                                              |
 |                                                              | 6.1  Il sistema mostra le richieste pendenti.                |
 | 7.1  Il docente o il tutor seleziona la richiesta che gli interessa. |                                                              |
@@ -911,13 +897,13 @@ ___
 | 9.1 ll docente o il tutor modifica il testo ed aggiunge eventuali commenti. |                                                              |
 |                                                              | 10.1 Il sistema salva le modifiche <br />10.2 Il sistema comunica agli studenti interessati che il docente o il tutor ha revisionato il loro elaborato. |
 
-#### Scenario alternativo A1 - La lista è vuota
+##### Scenario alternativo A1 - La lista è vuota
 
 | Docente o tutor | Sistema                                  |
 | --------------- | ---------------------------------------- |
 |                 | A1.6.1 Il sistema comunica che la lista delle richieste è vuota |
 
-### UC.6 - Registrazione di uno studente 
+#### UC.6 - Registrazione di uno studente 
 
 | Nome del caso d'uso  | Registrazione di uno studente            |
 | -------------------- | ---------------------------------------- |
@@ -926,21 +912,22 @@ ___
 | **Postcondizione**   | Lo studente è registrato alla piattaforma |
 | **Scenari astratti** | SC.6.1 - SC.6.2                          |
 
-#### Scenario principale
+##### Scenario principale
 
-| Studente                                       | Sistema                                                      |
-| ---------------------------------------------- | ------------------------------------------------------------ |
-| 1.1  Lo studente chiede di potersi registrare. |                                                              |
-|                                                | **Verifica esistenza dell'account**                          |
-|                                                | 4.2  Il sistema invia una richiesta di approvazione a tutti i docenti e tutor<br />4.3 Il sistema comunica il buon esito dell'operazione. |
+| Studente                                       | Sistema                                                                                                                                                                                      |
+| ---------------------------------------------- | ------------------------------------------------------------                                                                                                                                 |
+| 1.1  Lo studente chiede di potersi registrare. |                                                                                                                                                                                              |
+|                                                | 2.1 Il sistema chiede le informazioni necessarie alla autenticazione.                                                                                                                        |
+| 3.1 Lo studente inserisce i proprio dati.      |                                                                                                                                                                                              |
+|                                                | *include* **Verifica esistenza dell'account**<br />4.2  Il sistema invia una richiesta di approvazione a tutti i docenti e tutor<br />4.3 Il sistema comunica il buon esito dell'operazione. |
 
-#### Scenario alternativo A1 - Lo studente esiste già
+##### Scenario alternativo A1 - Lo studente esiste già
 
 | Studente | Sistema                                  |
 | -------- | ---------------------------------------- |
 |          | A1.4.2 Il sistema comunica che l'utente esiste già |
 
-### UC.7 - Creazione di un nuovo gruppo 
+#### UC.7 - Creazione di un nuovo gruppo 
 
 | Nome del caso d'uso  | Creazione di un nuovo gruppo             |
 | -------------------- | ---------------------------------------- |
@@ -949,20 +936,21 @@ ___
 | **Postcondizione**   | Lo studente ha creato un gruppo          |
 | **Scenari astratti** | SC.7.1 - SC.7.2 - SC.7.3 - SC.7.4 - SC.7.5 - SC.7.6 |
 
-#### Scenario principale
+##### Scenario principale
 
-| Studente                                                     | Sistema                                                      |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| **Login**                                                    |                                                              |
-| 5.1  Lo studente chiede al sistema di poter creare un nuovo gruppo |                                                              |
-|                                                              | 6.1 Il sistema chiede di inserire il nome del gruppo e il numero dei membri |
-| 7.1  Lo studente inserisce il nome e indica tre come numero dei membri del gruppo |                                                              |
-|                                                              | 8.1 Il sistema verifica la disponibilità del nome<br />**Verifica esistenza dell'account** |
-|                                                              | 10.2 Il sistema verifica che gli studenti invitati non facciano parte di altri gruppi<br />10.3 Il sistema chiede se si desidera confermare l'operazione |
-| 11.1 Lo studente conferma                                    |                                                              |
-|                                                              | 12.1 Il sistema invia una comunicazione a tutti gli studenti invitati<br />12.2 Il sistema conferma il buon esito dell'operazione |
+| Studente                                                                          | Sistema                                                                                                                                                                                                     |
+| ------------------------------------------------------------                      | ------------------------------------------------------------                                                                                                                                                |
+| *include* **Login**                                                               |                                                                                                                                                                                                             |
+| 5.1  Lo studente chiede al sistema di poter creare un nuovo gruppo                |                                                                                                                                                                                                             |
+|                                                                                   | 6.1 Il sistema chiede di inserire il nome del gruppo e il numero dei membri                                                                                                                                 |
+| 7.1  Lo studente inserisce il nome e indica tre come numero dei membri del gruppo |                                                                                                                                                                                                             |
+|                                                                                   | 8.1 Il sistema verifica la disponibilità del nome<br /> 8.2 Il sistema chiede le matricole degli studenti da invitare                                                                                       |
+| 9.1 Lo studente inserisce le matricole degli altri membri                         |                                                                                                                                                                                                             |
+|                                                                                   | *include* **Verifica esistenza dell'account**<br />10.2 Il sistema verifica che gli studenti invitati non facciano parte di altri gruppi<br />10.3 Il sistema chiede se si desidera confermare l'operazione |
+| 11.1 Lo studente conferma                                                         |                                                                                                                                                                                                             |
+|                                                                                   | 12.1 Il sistema invia una comunicazione a tutti gli studenti invitati<br />12.2 Il sistema conferma il buon esito dell'operazione                                                                           |
 
-#### Scenario alternativo A1 - numero di membri diversi da tre
+##### Scenario alternativo A1 - numero di membri diversi da tre
 
 | Studente                                 | Sistema                                  |
 | ---------------------------------------- | ---------------------------------------- |
@@ -970,34 +958,34 @@ ___
 |                                          | Ritorno allo scenario principale al punto 8.1 |
 |                                          | A1.12.1 Il sistema invia una comunicazione a tutti gli studenti invitati<br />A1.12.2 Il sistema invia una comunicazione a tutti i docenti e ai tutor<br />A1.12.3 Il sistema conferma il buon esito dell'operazione |
 
-#### Scenario alternativo A2 - uno o più studenti invitati non sono iscritti alla piattaforma
+##### Scenario alternativo A2 - uno o più studenti invitati non sono iscritti alla piattaforma
 
 | Studente | Sistema                                  |
 | -------- | ---------------------------------------- |
 |          | A2.10.2 Il sistema comunica che uno o più studenti non sono iscritti alla piattaforma |
 |          | Ritorno allo scenario principale al punto 8.2 |
 
-#### Scenario alternativo A3 - nome non disponibile
+##### Scenario alternativo A3 - nome non disponibile
 
 | Studente | Sistema                                  |
 | -------- | ---------------------------------------- |
 |          | A3.8.2 Il sistema comunica che il nome inserito è già in uso |
 |          | Ritorno allo scenario principale al punto 6.1 |
 
-#### Scenario alternativo A4 - uno o più studenti invitati fanno già parte di un altro gruppo
+##### Scenario alternativo A4 - uno o più studenti invitati fanno già parte di un altro gruppo
 
 | Studente | Sistema                                  |
 | -------- | ---------------------------------------- |
 |          | A4.10.3 Il sistema comunica che uno o più studenti fanno già parte di un gruppo |
 |          | Ritorno allo scenario principale al punto 8.2 |
 
-#### Scenario alternativo A5 - lo studente fa già parte di un gruppo
+##### Scenario alternativo A5 - lo studente fa già parte di un gruppo
 
 | Studente | Sistema                                  |
 | -------- | ---------------------------------------- |
 |          | A5.6.1 Il sistema informa lo studente che già fa parte di un gruppo e che non può essere membro di due gruppi |
 
-### UC.8 - Conferma partecipazione a un gruppo 
+#### UC.8 - Conferma partecipazione a un gruppo 
 
 | Nome del caso d'uso  | Conferma partecipazione a un gruppo      |
 | -------------------- | ---------------------------------------- |
@@ -1006,11 +994,11 @@ ___
 | **Postcondizione**   | Lo studente prenderà parte al gruppo     |
 | **Scenari astratti** | SC.8.1 - SC.8.2                          |
 
-#### Scenario principale
+##### Scenario principale
 
 | Studente                                                     | Sistema                                                      |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| **Login**                                                    |                                                              |
+| *include* **Login**                                                   |                                                                                                          |
 | 5.1  Lo studente chiede di visualizzare la lista degli inviti a prendere parte a un gruppo. |                                                              |
 |                                                              | 6.1 Il sistema  mostra tutti gli inviti                      |
 | 7.1  Lo studente seleziona l'invito che gli interessa.       |                                                              |
@@ -1018,14 +1006,14 @@ ___
 | 9.1 Lo studente accetta l'invito                             |                                                              |
 |                                                              | 10.1 Il sistema comunica il buon esito dell'operazione.      |
 
-#### Scenario alternativo A1 - Lo studente rifiuta l'invito 
+##### Scenario alternativo A1 - Lo studente rifiuta l'invito 
 
 | Studente                                 | Sistema                                  |
 | ---------------------------------------- | ---------------------------------------- |
 | A1.9.1 Lo studente rifiuta l'invito di partecipazione al gruppo. |                                          |
 |                                          | Ritorno allo scenario principale al punto 10.1. |
 
-### UC.9 - Creazione di un nuovo elaborato 
+#### UC.9 - Creazione di un nuovo elaborato 
 
 | Nome del caso d'uso  | Creazione di un nuovo elaborato          |
 | -------------------- | ---------------------------------------- |
@@ -1034,23 +1022,23 @@ ___
 | **Postcondizione**   | Verrà creato un nuovo elaborato          |
 | **Scenari astratti** | SC.9.1 - SC.9.1                          |
 
-#### Scenario principale
+##### Scenario principale
 
 | Studente                                                     | Sistema                                               |
 | ------------------------------------------------------------ | ----------------------------------------------------- |
-| **Login**                                                    |                                                       |
+| *include* **Login**                                                   |                                                                                                          |
 | 5.1  Lo studente chiede al sistema di creare un nuovo elaborato |                                                       |
 |                                                              | 6.1 Il sistema mostra le tracce disponibili           |
 | 7.1  Lo studente sceglie la traccia a cui è interessato      |                                                       |
 |                                                              | 8.1 Il sistema conferma il buon esito dell'operazione |
 
-#### Scenario alternativo A1 - Lo studente non è membro di un gruppo 
+##### Scenario alternativo A1 - Lo studente non è membro di un gruppo 
 
 | Studente | Sistema                                  |
 | -------- | ---------------------------------------- |
 |          | A1.6.1 Il sistema informa lo studente che per poter creare un elaborato bisogna far parte di un gruppo |
 
-### UC.10 - Modifica di un elaborato 
+#### UC.10 - Modifica di un elaborato 
 
 | Nome del caso d'uso  | Modifica di un elebaorato - upload diretto |
 | -------------------- | ---------------------------------------- |
@@ -1059,11 +1047,11 @@ ___
 | **Postcondizione**   | Lo studente ha modificato l'elaborato    |
 | **Scenari astratti** | SC.10.1 - SC.10.2 - SC.10.3              |
 
-#### Scenario principale
+##### Scenario principale
 
 | Studente                                                     | Sistema                                                      |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| **Login**                                                    |                                                              |
+| *include* **Login**                                                   |                                                                                                          |
 | 5.1  Lo studente chiede al sistema di mostrare la lista degli elaborati del gruppo di cui fa parte. |                                                              |
 |                                                              | 6.1 Il sistema mostra la lista degli elaborati               |
 | 7.1  Lo studente chiede al sistema di inserire un nuovo documento |                                                              |
@@ -1072,14 +1060,14 @@ ___
 |                                                              | 10.1 Il sistema conferma il buon esito dell'operazione.      |
 
 
-#### Scenario alternativo A1 - inserimento link esterno
+##### Scenario alternativo A1 - inserimento link esterno
 
 | Studente                                 | Sistema                                  |
 | ---------------------------------------- | ---------------------------------------- |
 | A1.9.1  Lo studente sceglie di caricare un link ad un documento di Google Drive ed inserisce il link |                                          |
 |                                          | Ritorno allo scenario principale al punto 10.1 |
 
-#### Scenario alternativo A2 - nessun elaborato prodotto
+##### Scenario alternativo A2 - nessun elaborato prodotto
 
 | Studente | Sistema                                  |
 | -------- | ---------------------------------------- |
