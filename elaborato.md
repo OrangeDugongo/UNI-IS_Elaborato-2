@@ -712,11 +712,10 @@ ___
 
 #### Scenario alternativo A2 - nessun elaborato prodotto
 
-| Studente | Sistema                                  |
-| -------- | ---------------------------------------- |
+| Studente | Sistema                                                      |
+| -------- | ------------------------------------------------------------ |
 |          | A2.6.1 Il sistema avvisa che il gruppo di cui fa parte ancora non ha prodotto alcun elaborato. |
-
-
+|          | Ritorno allo scenario principale al punto 7.1                |
 
 ## Modello dei casi d'uso raffinati
 
@@ -1069,9 +1068,10 @@ ___
 
 ##### Scenario alternativo A2 - nessun elaborato prodotto
 
-| Studente | Sistema                                  |
-| -------- | ---------------------------------------- |
+| Studente | Sistema                                                      |
+| -------- | ------------------------------------------------------------ |
 |          | A2.6.1 Il sistema avvisa che il gruppo di cui fa parte ancora non ha prodotto alcun elaborato. |
+|          | Ritorno allo scenario principale al punto 7.1                |
 
 
 
