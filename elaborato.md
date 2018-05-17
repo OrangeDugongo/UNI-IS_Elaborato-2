@@ -733,6 +733,7 @@ ___
 | 3.1 L'utente comunica il suo username e la password |                                                 |
 |                                                     | 4.1 Il sistema autentica l'utente               |
 
+![SDI1][]
 
 ### UC.I2 - Verifica esistenza account
 
@@ -744,6 +745,8 @@ ___
 | **Use cases**           | UC.1 - UC.6 - UC.7                                                                        |
 | **Utente**              | **Sistema**                                                                               |
 |                         | 3.1 Il sistema verifica l'esistenza dell'account utente                                   |
+
+![SDI2][]
 
 ### Use cases raffinati 
 
@@ -777,6 +780,10 @@ ___
 | Docente | Sistema                                                      |
 | ------- | ------------------------------------------------------------ |
 |         | A2.8.2 Il sistema avvisa il docente che i dati inseriti corrispondono ad un tutor già presente nel sistema.<br />Ritorno allo scenario principale al passo 6.1 |
+
+![ECB1][]
+
+![SD1][]
 
 #### UC.2 - Approvazione di uno studente 
 
@@ -814,6 +821,10 @@ ___
 | --------------- | ------------------------------------------------------------ |
 |                 | A2.6.1 Il sistema comunica che non ci sono richieste pendenti |
 
+![ECB2][]
+
+![SD2][]
+
 #### UC.3 - Modifica di una sezione
 
 | Nome del caso d'uso  | Modifica di una sezione                  |
@@ -840,6 +851,10 @@ ___
 | Docente o tutor | Sistema                                                      |
 | --------------- | ------------------------------------------------------------ |
 |                 | A1.8.1 Il sistema comunica l'impossibilità di entrane nella modalità modifica<br />A1.8.2 Il sistema mostra eventuali motivazioni |
+
+![ECB3][]
+
+![SD3][]
 
 #### UC.4 - Approvazione di un gruppo 
 
@@ -875,6 +890,10 @@ ___
 | --------------- | ---------------------------------------- |
 |                 | A2.6.1 Il sistema comunica che la lista delle approvazioni è vuota |
 
+![ECB4][]
+
+![SD4][]
+
 #### UC.5 - Commentare il lavoro di un gruppo 
 
 | Nome del caso d'uso  | Commentare il lavoro di un gruppo        |
@@ -902,6 +921,10 @@ ___
 | --------------- | ---------------------------------------- |
 |                 | A1.6.1 Il sistema comunica che la lista delle richieste è vuota |
 
+![ECB5][]
+
+![SD5][]
+
 #### UC.6 - Registrazione di uno studente 
 
 | Nome del caso d'uso  | Registrazione di uno studente            |
@@ -925,6 +948,10 @@ ___
 | Studente | Sistema                                  |
 | -------- | ---------------------------------------- |
 |          | A1.4.2 Il sistema comunica che l'utente esiste già |
+
+![ECB6][]
+
+![SD6][]
 
 #### UC.7 - Creazione di un nuovo gruppo 
 
@@ -984,6 +1011,10 @@ ___
 | -------- | ---------------------------------------- |
 |          | A5.6.1 Il sistema informa lo studente che già fa parte di un gruppo e che non può essere membro di due gruppi |
 
+![ECB7][]
+
+![SD7][]
+
 #### UC.8 - Conferma partecipazione a un gruppo 
 
 | Nome del caso d'uso  | Conferma partecipazione a un gruppo      |
@@ -1012,6 +1043,10 @@ ___
 | A1.9.1 Lo studente rifiuta l'invito di partecipazione al gruppo. |                                          |
 |                                          | Ritorno allo scenario principale al punto 10.1. |
 
+![ECB8][]
+
+![SD8][]
+
 #### UC.9 - Creazione di un nuovo elaborato 
 
 | Nome del caso d'uso  | Creazione di un nuovo elaborato          |
@@ -1036,6 +1071,10 @@ ___
 | Studente | Sistema                                  |
 | -------- | ---------------------------------------- |
 |          | A1.6.1 Il sistema informa lo studente che per poter creare un elaborato bisogna far parte di un gruppo |
+
+![ECB9][]
+
+![SD9][]
 
 #### UC.10 - Modifica di un elaborato 
 
@@ -1073,6 +1112,43 @@ ___
 |          | A2.6.1 Il sistema avvisa che il gruppo di cui fa parte ancora non ha prodotto alcun elaborato. |
 |          | Ritorno allo scenario principale al punto 7.1                |
 
+![ECB10][]
+
+![SD10][]
+
+![modelDomain][]
+
+
+
+![useCaseDiagram][]
+
 
 
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+
+
+
+[useCaseDiagram]: Model/usecase.png
+[modelDomain]: Model/ModelDomain.png
+[ECB1]: Model/ECB1-AggiuntaTutor.png
+[ECB2]: Model/ECB2-ApprovazioneStudente.png
+[ECB3]: Model/ECB3-ModificaSezione.png
+[ECB4]: Model/ECB4-ApprovazioneGruppo.png
+[ECB5]: Model/ECB5-CommentareLavoro.png
+[ECB6]: Model/ECB6-RegistrazioneStudente.png
+[ECB7]: Model/ECB7-CreazioneGruppo.png
+[ECB8]: Model/ECB8-ConfermaPartecipazione.png
+[ECB9]: Model/ECB9-CreazioneElaborato.png
+[ECB10]: Model/ECB10-ModificaElaborato.png
+[SDI1]: Model/SDI1-Login.png
+[SDI2]: Model/SDI2-VerificaAccount.png
+[SD1]: Model/SD1-AggiuntaTutor.png
+[SD2]: Model/SD2-ApprovazioneStudente.png
+[SD3]: Model/SD3-ModificaSezione.png
+[SD4]: Model/SD4-ApprovazioneGruppo.png
+[SD5]: Model/SD5-CommentareLavoro.png
+[SD6]: Model/SD6-RegistrazioneStudente.png
+[SD7]: Model/SD7-CreazioneGruppo.png
+[SD8]: Model/SD8-ConfermaPartecipazione.png
+[SD9]: Model/SD9-CreazioneElaborato.png
+[SD10]: Model/SD10-ModificaElaborato.png
