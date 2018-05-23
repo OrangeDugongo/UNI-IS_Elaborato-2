@@ -1217,7 +1217,7 @@ Le sezioni 1 e 4 sono navigabili anche da utenti non loggati.
 [modelDomain]: Model/ModelDomain.png
 [ECB1]: Model/ECB1-AggiuntaTutor.png
 [ECB2]: Model/ECB2-ApprovazioneStudente.png
-[ECB3]: Model/ECB3-ModificaSezione.png
+[ECB3]: Model/ECB-3.png
 [ECB4]: Model/ECB4-ApprovazioneGruppo.png
 [ECB5]: Model/ECB5-CommentareLavoro.png
 [ECB6]: Model/ECB6-RegistrazioneStudente.png
@@ -1229,12 +1229,12 @@ Le sezioni 1 e 4 sono navigabili anche da utenti non loggati.
 [SDI2]: Model/SDI2.png
 [SD1]: Model/SD1.png
 [SD2]: Model/SD2.png
-[SD3]: Model/SD3-dafare.png
+[SD3]: Model/SD3.png
 [SD4]: Model/SD4.png
 [SD5]: Model/SD5-CommentareLavoro.png
-[SD6]: Model/SD6-RegistrazioneStudente.png
-[SD7]: Model/SD7-CreazioneGruppo.png
-[SD8]: Model/SD8-ConfermaPartecipazione.png
-[SD9]: Model/SD9-CreazioneElaborato.png
-[SD10]: Model/SD10-ModificaElaborato.png
+[SD6]: Model/SD6.png
+[SD7]: Model/SD7.png
+[SD8]: Model/SD8.png
+[SD9]: Model/SD9.png
+[SD10]: Model/SD10.png
 [LOGO]: Model/logo.png
